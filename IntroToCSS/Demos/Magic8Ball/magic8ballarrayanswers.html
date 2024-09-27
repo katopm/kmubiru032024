@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAgic 8 Ball Answers</title>
+</head>
+<body>
+    <h1>Magic 8 Ball Answers</h1>
+
+    <div id="answers"></div>
+
+    <script>
+        // Create Array Variable for magic 8 ball answers
+        let answers = [];
+
+        // Populate arrat with index values
+        answers[0] = "It is certain";
+        answers[1] = "It is decidely so";
+        answers[2] = "Without a doubt";
+
+        //window.alert(answers);
+
+        let randomArrayIndex ;
+       randomArrayIndex = Math.floor ( Math.random() *answers.length );
+    
+    //window.alert(answers[randomArrayIndex])
+
+    let magic8BallDiv ;
+    magic8BallDiv = window.document.querySelector("#answers");
+    magic8BallDiv.innerHTML = answers[randomArrayIndex]
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029G8 - Transform</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        
+        h1{
+            text-align: center;
+            margin: auto;
+        }
+        div{
+            margin: auto;
+            padding: 10px;
+            margin-bottom:40px;
+        }
+        div#one{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        div#one:hover{
+            background-color: aqua;
+            transition: all 2s;
+            box-shadow: 60px -16px teal;
+            
+        }
+        div#two{
+            height: 200px;
+            width: 200px;
+            background-color: purple;
+        }
+        div#two:hover{
+            background-color: green;
+            transition: all 2s;
+            box-shadow: 25px 10px black;    
+            border-radius: 10% 30% 50% 70%;
+        }
+        div#three{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+        div#three:hover{
+            background-color: brown;
+            transition: all 2s;
+            border-radius: 10px 100px / 120px;
+            transform: scale(0.80);
+        }
+        div#four{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+        div#four:hover{
+            background-color: orange;
+            transition: all 2s;
+            box-shadow: 3px 3px red, 2rem 0 .4em olive;
+            border-radius: 10px 40px 40px 10px;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A029G8 - Transfrom</h1>
+
+    <div class="box" id="one">
+    </div>
+    
+    
+    <div class="box" id="two">
+    </div>
+    
+    
+    <div class="box" id="three">
+    </div>
+
+    <div class="box" id="four"></div>
+</body>
+</html>

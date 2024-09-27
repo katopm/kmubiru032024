@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flexbox Layout 002</title>
+    <style>
+        #pageheader{
+            height: 150px;
+            background-color:red;
+        }
+        #pagefooter{
+            height: 100px;
+            background-color: aqua;
+        }
+        #topnav{
+            height: 75px;
+            background-color: lime;
+        }
+        main{
+            flex-basis: 75%;
+            background-color: brown;
+        }
+        #aside{
+            flex-basis: 25%;
+            background-color: blueviolet;
+            min-height: 200px;
+        }
+        section{
+            background-color: orange;
+            border:1px solid black;
+            height: 200px;
+        }
+        #flexbox001{
+            display:flex; 
+            min-height: 450px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper"></div> 
+    <header id="pageheader">#pageheader</header>
+    <nav id="topnav">#topnav</nav>
+    <div id="flexbox001">
+        <main>Main</main>
+        <aside id="aside">#aside</aside>
+    </div>
+    <section class="q1section">#q1section</section>
+    <section class="q1section">#q2section</section>
+    <section class="q1section">#q3section</section>
+    <section class="q1section">#q4section</section>
+    <footer id="pagefooter">#pagefooter</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2AGRPHX</title>
+    <style>
+        #truck{
+            background-image: url(Images/truck.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: none;
+            z-index: 1;
+            height: 300px;
+            width: 400px;
+            position: relative;
+            top: 200px;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate
+        }
+
+        @keyframes move {
+            from{translate: 0px;}
+            to{translate: 450px;}
+        }
+        #hay{
+            background-image: url(Images/hay.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: none;
+            height: 100px;
+            width: 100px;
+            z-index: 0;
+            position: relative;
+            top: -300px;
+            left: 700px;
+            animation-name: drop;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes drop {
+            from{translate: 0px;}
+            to{translate:0px 230px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>A029J3A2AGRPHX</h1>
+
+    <div id="truck"></div>
+    <div id="hay"></div>
+</body>
+</html>

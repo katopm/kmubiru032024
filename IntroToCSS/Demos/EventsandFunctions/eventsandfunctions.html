@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Functions</title>
+</head>
+<body>
+    <h1>Events and Fucntions</h1>
+    <button id="hello" onclick="sayHello()">Say Hello</button>
+    <button id="hola">Say Hola</button>
+
+    <script>
+        // Old way of adding events
+        function sayHello()
+        {
+            window.alert('Hello');
+        }
+        // New way of adding events
+        // Get your target
+        // Add event
+        // Call a function
+        
+        //Get target
+        // Create variable and assign value
+        const btmHola = window.document.querySelector('#hola');
+        // Add event 
+        btmHola.addEventListener('click', sayHola);
+        // Create the fucntion
+        function sayHola() {
+            window.alert('Hola')
+        }
+    </script>
+</body>
+</html>

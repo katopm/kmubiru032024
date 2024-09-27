@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gladiator - Logical Operators</title>
+</head>
+<body>
+    <h1>Gladiator - Logical Operators </h1>
+    <script>
+        /*
+        Logical Operators
+        - AND && : All conditions must be true to evalute a true
+        - OR ||  : At least one condition has to be true to evalute as true
+        - NOT !  : Set value to opposite value !true = false and !false = true
+        */
+
+        // Create and Assign values to variables
+        let age = 23;
+        let hieght = 74;
+        let wieght = 210;
+        let sex = "Male";
+        let name = "Coup";
+        let isGladiator = false;
+        let isAlive = true
+
+        // Qualificatiion for a gladiator
+        /*
+        age: 18 and over  
+        hieght: 72 inches ot taller (6ft)
+        wieght: 200 lbs or more
+        */
+
+        if(age  >=18 || hieght >=72 || wieght >=250 )
+        {
+            console.log("You are a gladiator, " + name);
+            isGladiator = true;
+        }
+        else{
+            console.log("You are not a gladiator, " + name);
+            isGladiator = false;
+        }
+        
+        // The Gladiator loses after fighting bravely 
+        // The emperor decides his fate
+
+        console.log("The emperor say, the ggaldiator isAlive is equal to " + isAlive)
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rome</title>
+<style>
+#container {
+width: 90%;
+background-color: purple;
+margin: auto;
+padding: 2rem;
+max-width: 1200px;
+}
+#wrapper {
+width: 90%;
+background-color: green;
+margin: auto;
+}
+#pageheader {
+min-height: 120px;
+background-color: orange;
+padding: 0.5rem;
+}
+#media {
+min-height: 120px;
+background-color: lime;
+padding: 0.5rem;
+}
+#sidenav {
+min-height: 120px;
+background-color: lightblue;
+padding: 0.5rem;
+}
+#pagemain {
+min-height: 120px;
+background-color: white;
+padding: 0.5rem;
+}
+#pagefooter {
+min-height: 120px;
+background-color: silver;
+padding: 0.5rem;
+}
+
+@media screen and (min-width:700px)
+{
+    body{
+        background-color: red;
+    }
+    #fb001{
+        display: flex;
+    }
+    #sidenav{
+        flex:1;
+        min-height: 500px;
+    }
+    #pagemain{
+        flex: 3;
+    }
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="wrapper">
+<header id="pageheader">#pageheader</header>
+<div id="media">#media</div>
+<div id="fb001">
+    <nav id="sidenav">#sidenav</nav>
+    <main id="pagemain">#pagemain</main>
+</div>
+<footer id="pagefooter">#pagefooter</footer>
+</div>
+<!-- end wrapper -->
+</div>
+<!-- end container -->
+</body>
+</html>

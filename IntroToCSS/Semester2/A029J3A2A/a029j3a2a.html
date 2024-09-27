@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2A - Keyframe Animations (From To)</title>
+    <style>
+body{
+    background-color: gray;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#one{
+    width: 10rem;
+    height: 10rem;
+    background-color: pink;
+    margin-left: 2rem;
+    animation:alternate;
+    animation-duration: 5s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-name: rotate;
+
+
+}
+
+@keyframes rotate
+{
+    from
+    {margin-left:0rem ;
+        rotate: 0deg;
+        border-radius: 0rem 0rem 0rem 0rem;
+    }
+    to
+    {
+        margin-left: 80rem;
+        rotate:360deg;
+        border-radius: 4rem 7rem 4rem 7rem ;
+        
+    }
+}
+#two{
+    width:10rem;
+    height: 10rem;
+    background-color: lightgreen;
+    animation-name: hieght;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes hieght
+{
+from{rotate: 0deg;
+    border-radius: 0rem;
+}
+to{ rotate:360deg;
+    border-radius: 4rem;
+}
+}
+#three{
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    animation-name: width;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin: auto;
+    
+}
+
+@keyframes width
+{
+    from{width: 10rem;}
+    to{width: 20rem;}
+}
+#four{
+    width: 10rem;
+    height: 10rem;
+    background-color: none;
+    margin-left: 70rem;
+    margin-top: -4rem;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-name: curt;
+}
+@keyframes curt
+{
+    from{background-color: aqua;}
+    to{background-color: beige;
+    border-radius: 100% 0% 0% 100% / 41% 38% 62% 59%;}
+}
+    </style>
+</head>
+<body>
+    <h1>A029J3A2A - Keyframe Animations (From To)</h1>
+    
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    
+</body>
+</html>

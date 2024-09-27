@@ -1,0 +1,282 @@
+body{
+    background-color: balck;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url(Images/bodybackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 1);
+    min-height: 100px;
+    padding: 0.7rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+    
+}
+header h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-left: 75px;
+    font-family: "Sedgwick Ave Display", cursive;
+font-weight: 400;
+font-style: normal;
+    
+}
+
+#wrapper{
+    background-color: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1200px;
+    animation-name: spin2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#topnav{
+    background-color: #c8380f;
+    min-height: 150px;
+    padding: 1rem;
+    z-index: 1;
+}
+
+#topnav ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#topnav ul li{
+    background-color: none;
+    border: 1px solid silver;
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+li:hover{
+    background-color: gray;
+    color:white;
+    text-shadow: red;
+    
+}
+li a {
+    color: white;
+}
+
+#media{
+    background-color: blue;
+    min-height: 250px;
+    padding: 1rem;
+    background-image: url(Images/media.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+main{
+    background-color: white;
+    min-height: 300px;
+    padding: 1rem;
+    color: black;
+    line-height: 1.7;
+}
+
+main h2{
+    text-align: center;
+    font-family: "Sedan SC", serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1.5;
+}
+
+main video{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio:640/360 ;
+    display: block;
+    margin: auto;
+    display: none;
+    z-index: 0;
+}
+
+#cards{
+    background-color: #333;
+    min-height: 300px;
+    padding: 1rem;
+}
+
+article{
+    background-color: white;
+    min-height: 300px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+footer{
+    background-color: #c8380f;
+    min-height: 50px;
+    padding: 1rem;
+}
+#logodesktop{
+    display: none;
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+#cards article{
+    background-color: red;
+    background-position: center center;
+    background-size: cover;
+    max-width: 400px;
+    aspect-ratio: 400/300;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+}
+#cards article h3 {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Permanent Marker", cursive;
+font-weight: 400;
+font-style: normal;
+}
+article:hover{
+    
+    transition: all 1s;
+}
+#bronx{
+    background-image: url(Images/bronxcard.jpg);
+}
+#bronx:hover{
+    background-image: url(Images/bronxcardbw.jpg);
+}
+#Brooklyn{
+    background-image: url(Images/brooklyncard.jpg);
+}
+#Brooklyn:hover{
+    background-image: url(Images/brooklyncardbw.jpg);
+}
+#manhattan{
+    background-image: url(Images/manhattancard.jpg);
+}
+#manhattan:hover{
+    background-image: url(Images/manhattancardbw.jpg);
+}
+#queens{
+    background-image: url(Images/queenscard.jpg);
+}
+#queens:hover{
+    background-image: url(Images/queenscardbw.jpg);
+}
+#statenisland{
+    background-image: url(Images/statenislandcard.jpg);
+}
+#statenisland:hover{
+    background-image: url(Images/statenislandcardbw.jpg);
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        transform: rotateX(-360deg);
+    }
+    
+}
+
+@keyframes spin2 {
+    from{
+        transform: rotate(0deg);
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        transform: rotateY(-360deg);
+        
+    }
+}
+/*Desktop styles */
+@media screen and (min-width:900px)
+{
+    #topnav ul{
+        flex-direction: row;
+    }
+
+    #topnav{
+        min-height: 50px;
+        position: sticky;
+        top: 120px;
+    }
+    #topnav ul li{
+        border: none;
+        padding: 0.5rem;
+
+    }
+    li:hover{
+        background-color: black;
+    }
+    header{
+        display: block;
+    }
+
+    #medialogo{
+        display: none;
+    }
+    #wrapper{
+        margin-top: 250px;
+    }
+    #logodesktop{
+        display: block;
+        position: absolute;
+        top: -90px;
+        left: -100px;
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    
+    main h1{
+        text-align: left;
+    }
+
+    main video{
+        display: block;
+    }
+}
+
+#medialogo{
+    background-color: black;
+}
+
+#medialogo img{
+    display: block;
+    margin: auto;
+}

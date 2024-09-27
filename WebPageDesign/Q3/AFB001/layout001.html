@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout001</title>
+    <style>
+        #flexbox001{
+            background-color: white;
+            border: 1px solid black;
+            min-height: 400px;
+            display: flex;
+        }
+        #sidenav{
+            background-color: green;
+            flex-basis: 25%;
+        }
+        Main{
+            background-color: yellow;
+            flex-basis: 50%;
+        }
+        #sideaside{
+            background-color: blue;
+            flex-basis: 25%;
+        }
+        #pageheader{
+            background-color: orange;
+            height: 150px;
+        }
+        #pagefooter{
+            background-color: pink;
+            height: 100px;
+        }
+        #wrapper{
+            max-width: 1024px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <header id="pageheader">#pageheader</header>
+    <div id="flexbox001">
+        <nav id="sidenav"> #sidenav</nav>
+        <main> Main </main>
+        <aside id="sideaside"> #sideaside </aside>
+    </div>
+    
+    <footer id="pagefooter">#pagefooter</footer>
+    </div>
+
+</body>
+</html>

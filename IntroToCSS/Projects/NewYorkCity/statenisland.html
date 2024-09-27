@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Staten Island</title>
+    <style>
+        /*Mobile First Styles */
+        body{
+            background-color: balck;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url(Images/bodybackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center bottom;
+        }
+
+        header{
+            background-color: rgba(0, 0, 0, 1);
+            min-height: 100px;
+            padding: 0.7rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: none;
+            z-index: 1;
+            
+        }
+        header h1{
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding-left: 75px;
+            font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+            
+        }
+
+        #wrapper{
+            background-color: none;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            max-width: 1200px;
+            animation-name: spin2;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+
+        #topnav{
+            background-color: #c8380f;
+            min-height: 150px;
+            padding: 1rem;
+            z-index: 1;
+        }
+
+        #topnav ul{
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        #topnav ul li{
+            background-color: none;
+            border: 1px solid silver;
+            padding: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+
+        }
+
+        li:hover{
+            background-color: gray;
+            color:white;
+            text-shadow: red;
+            
+        }
+        li a {
+            color: white;
+        }
+
+        #media{
+            background-color: blue;
+            min-height: 250px;
+            padding: 1rem;
+            background-image: url(Images/media.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        main{
+            background-color: white;
+            min-height: 300px;
+            padding: 1rem;
+            color: black;
+            line-height: 1.7;
+        }
+
+        main h2{
+            text-align: center;
+            font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5;
+        }
+
+        main img{
+            max-width: 100%;
+            height: auto;
+            aspect-ratio:640/360 ;
+            display: block;
+            margin: auto;
+            display: none;
+            z-index: 0;
+        }
+
+        #cards{
+            background-color: #333;
+            min-height: 300px;
+            padding: 1rem;
+        }
+
+        article{
+            background-color: white;
+            min-height: 300px;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer{
+            background-color: #c8380f;
+            min-height: 50px;
+            padding: 1rem;
+        }
+        #logodesktop{
+            display: none;
+        }
+        #cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        #cards article{
+            background-color: red;
+            background-position: center center;
+            background-size: cover;
+            max-width: 400px;
+            aspect-ratio: 400/300;
+            justify-content: center;
+            align-items: flex-end;
+            display: flex;
+        }
+        #cards article h3 {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem;
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+        }
+        article a {
+            color: black;
+        }
+        article:hover{
+            
+            transition: all 1s;
+        }
+        #bronx{
+            background-image: url(Images/bronxcard.jpg);
+        }
+        #bronx:hover{
+            background-image: url(Images/bronxcardbw.jpg);
+        }
+        #Brooklyn{
+            background-image: url(Images/brooklyncard.jpg);
+        }
+        #Brooklyn:hover{
+            background-image: url(Images/brooklyncardbw.jpg);
+        }
+        #manhattan{
+            background-image: url(Images/manhattancard.jpg);
+        }
+        #manhattan:hover{
+            background-image: url(Images/manhattancardbw.jpg);
+        }
+        #queens{
+            background-image: url(Images/queenscard.jpg);
+        }
+        #queens:hover{
+            background-image: url(Images/queenscardbw.jpg);
+        }
+        #statenisland{
+            background-image: url(Images/statenislandcard.jpg);
+        }
+        #statenisland:hover{
+            background-image: url(Images/statenislandcardbw.jpg);
+        }
+        #statenisland a{
+            color: red;
+        }
+
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+                transform: rotateX(-360deg);
+            }
+            
+        }
+
+        @keyframes spin2 {
+            from{
+                transform: rotate(0deg);
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+                transform: rotateY(-360deg);
+                
+            }
+        }
+        /*Desktop styles */
+        @media screen and (min-width:900px)
+        {
+            #topnav ul{
+                flex-direction: row;
+            }
+
+            #topnav{
+                min-height: 50px;
+                position: sticky;
+                top: 120px;
+            }
+            #topnav ul li{
+                border: none;
+                padding: 0.5rem;
+
+            }
+            li:hover{
+                background-color: black;
+            }
+            header{
+                display: block;
+            }
+
+            #medialogo{
+                display: none;
+            }
+            #wrapper{
+                margin-top: 250px;
+            }
+            #logodesktop{
+                display: block;
+                position: absolute;
+                top: -90px;
+                left: -100px;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+            }
+            
+            main h1{
+                text-align: left;
+            }
+
+            main img{
+                display: block;
+            }
+        }
+
+        #medialogo{
+            background-color: black;
+        }
+
+        #medialogo img{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Staten Island</h1>
+    </header>
+    <div id="medialogo">
+        <img src="Images/newyorklogo.png" alt="New York City Logo">
+    </div>
+
+    <div id="wrapper">
+        <nav id="topnav">
+<img id="logodesktop" src="Images/newyorklogo.png" alt="New York Logo" width="200">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bronx.html">Bronx</a></li>
+                <li><a href="brooklyn.html">Brooklyn</a></li>
+                <li><a href="manhattan.html">Manhattan</a></li>
+                <li><a href="queens.htmls">Queens</a></li>
+                <li><a href="statenisland.html">Staten Island</a></li>
+            </ul>
+        </nav>
+
+        <div id="media"></div>
+
+        <main>
+            <h2>Welcome to Staten Island</h2>
+
+            <img src="Images/statenisalnd.jpg" alt="">
+<p>
+                Staten Island is one of the five boroughs of New York City, in the U.S. state of New York, located in the southwest part of the city. Staten Island is separated from New Jersey by the Arthur Kill and the Kill Van Kull, and from the rest of New York by New York Bay. With a population of 468,730, Staten Island is the least populated of the boroughs but is the third-largest in area at 59 sq mi (153 km2).
+    
+</p>
+
+<p>
+    The borough is coextensive with Richmond County, and until 1975 the borough was officially named the Borough of Richmond. Staten Island has been sometimes called "the forgotten borough" by inhabitants who feel neglected by the city government.
+    
+</p>
+
+<p>
+    The North Shore — especially the neighborhoods of St. George, Tompkinsville, Clifton, and Stapleton — is the most urban part of the island; it contains the officially designated St. George Historic District and the St. Paul’s Avenue-Stapleton Heights Historic District, which feature large Victorian houses. The East Shore is home to the 2.5-mile (4 km) F.D.R. Boardwalk, the fourth-longest in the world. The South Shore developed rapidly beginning in the 1960s and 1970s, and is mostly suburban in character. The West Shore is the least populated and most industrial part of the island.
+    
+</p>
+
+<p>
+    Staten Island used to claim the largest landfill in the world. It was closed in 2001, then shortly afterward temporarily reopened to receive the debris from the September 11th attacks. The landfill is being made into what will be New York City's second largest public park.
+    
+</p>   </main>
+
+        <section id="cards">
+            <article id="bronx"><a href="bronx.html"></a><h3>Bronx</h3></article>
+            <article id="Brooklyn"> <a href="brooklyn.html"></a><h3>Brooklyn</h3></article>
+            <article id="manhattan"><a href="manhattan.html"></a><h3>Manhattan</h3></article>
+            <article id="queens"><a href="queens.html"></a><h3>Queens</h3></article>
+            <article id="statenisland"><a href="statenisland.html"></a><h3>SattenIsalnd</h3></article>
+        </section>
+        <footer>
+            &copy; Kato Mubiru 2024
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kato Mubiru - Portfolio</title>
+    <style>
+        html{
+        scroll-behavior: smooth;
+        }
+        body{
+            background-color:steelblue;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            background-image: url(Images/car.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #container{
+            background-color: white;
+            width: 50%;
+            margin: 0 auto;
+            padding: 2rem;
+            max-width: 1200px;
+            border-radius: 1.5rem;
+        }
+        #wrapper{
+            border: 3px solid white;
+            border-radius: 1.9rem;
+            margin: auto;
+        }
+        #pageheader{
+            background-color: lightblue;
+            min-height: 205px;
+            padding: 1rem;
+            border-radius: 1.5rem 1.5rem 0 0;
+            background-image: url(Images/Sailor-Moon-Cosmos.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        #logo{
+            width: 150px;
+            height: 150px;
+            background-color:none;
+            border-radius: 50%;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            position: relative;
+            right: 80px;
+            top: -60px;
+            background-image: url(Images/Logo.jpg);
+            background-position: center;
+            background-size: 250px;
+        }
+        blockquote{
+            text-align: center;
+            font-size: 24px;
+            color: #c1e99f;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px #d65391;
+        }
+        #quote{
+            background-color:none;
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+        #pagenav{
+            background-color: #5084cf;
+            padding: 1rem;
+            color: white;
+            border-top: 3px solid ;
+            border-bottom: 3px solid ;
+        }
+        #pagenav a{
+color: white;
+        }
+        #media{
+            min-height: 250px;
+            background-image: url(Images/car.jpg);
+            background-attachment: fixed;
+            padding: 1rem;
+            color: white;
+        }
+        iframe{
+            width: 80%;
+            aspect-ratio: 15/9;
+            margin: auto;
+            display: block;
+        }
+        #pagemain{
+            background-color: #fff;
+            color: black;
+            min-height: 250px;
+            padding: 1rem;
+        }
+        
+        #career{
+            min-height: 200px;
+            background-color: #c6ecd1;
+        }
+        .semester{
+            min-height: 200px;
+            background-color: #f6f6f6;
+            color: black;
+            padding: 1rem;
+            border-top: 3px solid red;
+            border-bottom: 3px solid red;
+        }
+        #semester1 a{
+color: black;
+        }
+        #semester2 a{
+            color: black;
+        }
+        #pagefooter{
+            background-color: lightblue;
+            color: black;
+            padding: 1rem;
+            text-align: center;
+        }
+        #pagefooter a{
+            color: red;
+        }
+        #subfooter{
+            background-color: #4f90a2;
+            color: black;
+            padding: 1rem;
+            text-align: center;
+            min-height: 150px;
+            text-align: center;
+            border-radius: 0 0 1.5rem ;
+        }
+
+        #flexbox001{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #semester1, #semester2{
+            flex: 1;
+        }
+
+        @media  screen and (min-width :700px) 
+        {
+            #flexbox001{
+            flex-direction: row;
+        }
+        }
+
+        #career a{
+            color: black;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="container">
+    <div id="wrapper">
+    
+            <header id="pageheader">
+
+                <div id="logo">
+                    
+                </div>
+
+
+                <blockquote>
+                    My Favorite quote
+                </blockquote>
+
+
+
+        <p id="quote">I'm going to be my own kind of princess
+            - Sailor Moon
+        </p>
+
+
+        </header> 
+        <nav id="pagenav">
+
+<a href="#career">Career</a n> 
+| 
+<a href="#semester1">Semester 1 </a>
+|
+<a href="#semester2"> Semester 2</a>
+
+
+
+
+        </nav>
+
+        <div id="media"><iframe src="https://www.youtube.com/embed/_--BVXf8loc?si=AVt6bACWAhP2xtw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<div id="pagemain">
+
+
+    <p> Hello my name is Kato people call me Paul. I am happy to start this new chapter in my life. And I am very excited to see what I learn through my whole high school experiecne and the new friends I will make along the way on the jurney. So I have learnd a lot from WebPage Design 1, and Intro to Computer Science and hope to learn more in the coming years.</p>
+
+
+    <section id="career">
+       <h2> Career</h2>
+       <a name="career"></a>
+       <li> <a href="https://docs.google.com/document/d/1iX6AwcAnTLw4vaHMScraaAfdgD2c--4ZBtWzEmsHruY/edit?usp=sharing">Career Action Plan</a></li>
+    </section>
+
+   <div id="flexbox001">
+                                        <section id="semester1" class="semester">
+                                            <h2>Semester 1</h2>
+    
+                                            <a name="semester1"></a>
+                                            <ul>
+                                                <li><a href="Semester1/A001JS/a001js.html">A001JS</a></li>
+                                                <li><a href="Semester1/A002JS/a002js.html">A002JS</a></li>
+                                                <li><a href="Semester1/A003JS/a003js.html">A003JS</a></li>
+                                                <li><a href="Semester1/A004JS/a004js.html">A004JS</a></li>
+                                                <li><a href="Semester1/A005JS/a005js.html">A005JS</a></li>
+                                                <li><a href="Semester1/A006JS/a006js.html">A006JS</a></li>
+                                                <li><a href="Semester1/A029J3/a029js.html">A029JS</a></li>
+                                                <li><a href="Semester1/A029J3/a029j3.html">A029J3</a></li>
+                                                <li><a href="Semester1/A029J3A/a029j3a.html">A029J3A</a></li>
+                                                <li><a href="Semester1/A029J3A2x/a029j3a2x.html">A029J3A2x</a></li>
+    
+                                                
+                                                
+                                            </ul>
+                                        </section>
+    
+                                        <section id="semester2" class="semester">
+                                            <h1>Semester 2</h1>
+                                            <a name="semester2"></a>
+                                            <ul>
+                                                <li><a href="Demos/ForLoopMultipilcationTable/forloopmultiplicationtable.html">For Loop Multiplication Table</a></li>
+                                                <li><a href="Demos/ForLoopMultipilcationTableAdvanced/forloopmultiplicationtableadvanced.html">For Loop Multiplication Table Advanced</a></li>
+                                                <li><a href="Activities/Popsicle/popsicle.html">Popsicle</a></li>
+                                                <li><a href="Semester1/A029J3A/a029j3a.html">A029J3A</a></li>
+                                                <li><a href="Semester2/A029G8/a029g8.html">A029G8</a></li>
+                                                <li><a href="Semester2/A029J3A2/a029jsa2.html">A029JSA2</a></li>
+                                                <li><a href="Semester2/A029J3A2GRFX/a029j3agrfx.html">A029J3A2GRFX</a></li>
+                                                <li><a href="Semester2/A029J3A2A/a029j3a2a.html">A029J3A2A</a></li>
+                                                <li><a href="Semester2/A029j3a2aHJ/a029j3a2hj.html">A029j3a2aHJ</a></li>
+                                                <li><a href="Demos/CSSGridAreas001/cssgridareas001.html">CSS Grid Areas</a></li>
+                                                <li><a href="Demos/RandomNumbers/randomnumber.html">RandomNumbers</a></li>
+                                                <li><a href="Semester2/A029j3a2aH/a029j3a2ah.html">A029j3a2aH</a></li>
+                                                <li><a href="Activities/RandomBugGenerator/randombuggenerator.html">Random Bug Generator</a></li>
+                                                <li><a href="Activities/OnYourOwn2/onyourown2.html">On Your Own 2</a></li>
+                                                <li><a href="Activities/FlexandGrid/flex.html">Layout Flex</a></li>
+                                                <li><a href="Activities/FlexandGrid/grid.html">Layout Grid</a></li>
+                                                <li><a href="Semester2/A029J3A2AGRPHX/a029j3a2agrphx.html">A029J3A2AGRPHX</a></li>
+                                                <li><a href="Activities/GridAreasMediaQueries/gridareasmediaquaries.html">Grid Areas Media Queries</a></li>
+                                                <li><a href="Demos/RandomColorbox/randomcolorbox.html">RandomColorbox</a></li>
+                                                <li><a href="Demos/Magic8Ball/magic8ball.html">Magic8Ball</a></li>
+                                                <li><a href="Projects/NewYorkCity/index.html">New York City</a></li>
+                                                <li><a href="Demos/Hamburgermenu/hamburgermenu.html">Hamburger Menu</a></li>
+                                                <li><a href="Demos/GoogleMaps/googlemaps.html">Google Maps</a></li>
+                                            </ul>
+                                        </section>
+   </div>
+
+
+    <footer id="pagefooter">
+        <a href="chsserver01.org">Chagoyan</a> |
+        <a href="https://chsserver01.org/chaggy.net/colortheory/colorscheme2/index-en.html">Color Scheme</a> |
+        <a href="https://coalingahuron.aeries.net/">Aeries</a> |
+
+        <a href="https://chs.chusd.org/o/chs">CHS</a> |
+        <a href="https://go.weareimago.com/">Imago</a> |
+        <a href="https://listenwise.com/">Listenwise</a> | 
+
+        <a href="https://www.google.co.uk/?safe=active&ssui=on">Google</a> |
+        <a href="https://classroom.google.com/u/0/h">Classroom</a> |
+        <a href="https://app.minga.io/landing/country">Minga</a> |
+    </footer>
+    <footer id="subfooter">
+        <p> &copy;Kato Mubiru 2023 - 
+
+
+            <script>
+                window.document.write(new Date().getFullYear());
+            </script>
+
+        </p>
+    </footer>
+</div>
+
+    </div>
+    <!-- end wrapper -->
+
+
+
+
+
+
+    </div>
+    <!-- end container -->
+</body>
+</html>

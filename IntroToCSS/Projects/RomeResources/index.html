@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Rome</title>
+    <style>
+        body{
+            margin: 0;
+            margin: 0 ;
+        }
+        #container{
+            width: 90%;
+            background-color: gray;
+            margin: auto;
+            margin-top: 120px;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+        #wrapper{
+            width: 90%;
+            background-color: black;
+            margin: auto;
+        }
+        #pageheader{
+            min-height: 120px;
+            padding: 0.5em;
+            background-color: maroon;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+        }
+        #media{
+            min-height: 120px;
+            padding: 0.5em;
+            background-color: pink;
+            grid-area: media;
+        }
+        #sidenav{
+            min-height: 120px;
+            padding: 0.5em;
+            background-color: beige;
+            grid-area: sidenav;
+        }
+        #pagemain{
+            min-height: 120px;
+            padding: 0.5em;
+            background-color: lightblue;
+            grid-area: pagemain;
+        }
+        #pagefooter{
+            min-height: 120px;
+            padding: 0.5em;
+            background-color: lightcoral;
+            grid-area: pagefooter;
+        }
+        @media screen and (min-width:700px) {
+            body{
+                background-color: red;
+            }
+            #wrapper{
+                display: grid;
+                grid-template-areas: 
+                "media media media media"
+                "sidenav pagemain pagemain pagemain"
+                "pagefooter pagefooter pagefooter pagefooter";
+            }
+            #sidenav{
+                min-height: 500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header id="pageheader">#pageheader</header>
+    <div id="container">
+        <div id="wrapper">
+
+            <div id="media">#media</div>
+            <nav id="sidenav">#sidenav</nav>
+            <main id="pagemain">#pagemain</main>
+            <footer id="pagefooter">#pagefooter</footer>
+
+
+        </div>
+        <!--End Wrapper-->
+    </div>
+    <!--End Container-->
+</body>
+</html>

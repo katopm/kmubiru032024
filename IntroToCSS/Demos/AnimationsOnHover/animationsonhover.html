@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations On Hover</title>
+    <style>
+        body{background-color: gray;}
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: beige;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #one{
+            transition: all 2s;
+        }
+        #one:hover{
+            border-radius: 50%;
+            scale: .5;
+        }
+        #two{background-color:steelblue;}
+        #two:hover{
+            animation-name: recolor;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes recolor{
+            0%{background-color: beige;}
+            25%{background-color: pink;}
+            50%{background-color: lightblue;}
+            75%{background-color: brown;}
+            100%{background-color: black;}
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Anuimations on Hover</h1>
+    
+    <div id="one"></div>
+    <div id="two"></div>
+</body>
+</html>

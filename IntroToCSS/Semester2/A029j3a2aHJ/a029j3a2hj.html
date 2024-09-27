@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029j3a2aHJ</title>
+    <style> 
+        body{
+            background-color:gray ;
+            margin-top: 100px;
+            
+            
+        }
+
+        h1{
+            color: wheat;
+        }
+        #wrapper{
+            display: flex;
+            justify-content: center;
+        }
+
+        
+
+        #tire{
+            height: 150px;
+            width: 150px;
+            background-color: none;
+            
+            top: 20px;
+            left: 20px;
+            background-image: url(Images/tire.png);
+            background-size: cover;
+            
+        }
+        
+        .tire{
+            animation-name: tire;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+        }
+
+
+        .round{
+            border-radius: 50%;
+        }
+        @keyframes tire{
+            from{
+                
+                transform: rotate(0deg);
+            }
+            to{
+                
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>A029j3a2aHJ</h1>
+
+    <div id="wrapper">
+
+            <div  id="tire"></div>
+        
+    </div>
+    <button onclick="addClass()">Toggle Animation</button>
+    <script>
+
+        //Create orbit variable
+        let orbit = window.document.querySelector('#tire')
+        function addClass()
+        {
+            orbit.classList.toggle('tire')
+        }
+    </script>
+</body>
+</body>
+</html>

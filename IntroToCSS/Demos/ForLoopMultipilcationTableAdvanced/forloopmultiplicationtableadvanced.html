@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For Loop Multiplication Table Advanced</title>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                padding:1rem;
+            }
+
+            th{
+                background-color:gray;
+            }
+             
+            tr:hover{
+                background-color: lightblue;
+                
+            }
+            td:hover{
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>For Loop Multiplication Table</h1>
+
+
+        <script>
+
+            // Create range variable
+            let range;
+
+            // Script Function
+            requestInput();
+            validateInput();
+            buildTable();
+
+            function requestInput(){
+                range = window.prompt('Enter the mulitplication range');
+            }
+            function validateInput(){
+                
+                while(  isNaN(range)  || range < 1)
+                {
+                    window.alert("Your entry is invalid. Enter a positive number")
+                    requestInput();
+                }
+            }
+            function buildTable(){
+                // Setup Table
+            window.document.write('<table>');
+            window.document.write('<tr>');
+            window.document.write('<th>X</th>');
+
+            // For loop for horizantol factors (table headers)
+            for(let x = 1; x <= range; x++)
+            {
+                // Code to run
+                document.write( '<th>' +  x + '</th>');
+                
+            }
+            // End the first row
+            document.write('</tr>');
+
+            for(let i = 1 ; i <= range ; i++)
+            {
+                document.write('<tr>')
+                document.write('<th>' + i + '</th>');
+                // for loop for products
+                for(let z = 1 ; z <= range ; z++)
+                {
+                    document.write('<td>' + z * i + '</td>');
+
+                }
+            }
+            }
+
+
+            // JavaScript Math Operators
+            // window.document.write('Hello World')
+            console.log('Hello Mundo');
+            console.log(2 + 2)
+            console.log(15 * 15)
+            console.log(20 / 5)
+        </script>
+        
+    </body>
+    </html>

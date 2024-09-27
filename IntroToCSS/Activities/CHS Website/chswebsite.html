@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHS Website</title>
+    <style>
+        #wrapper{
+            border: 5px solid black;
+            margin: auto;
+            width: 1000px;
+            display: grid;
+            grid-template-areas: 
+            "ph ph ph ph ph"
+            "pl pl pl pl pl"
+            "sl sl sl sl sl"
+            ". pa st bo ."
+            "mi mi mi mi mi"
+            "en en en en en"
+            ". ne ca tw ."
+            "sm sm sm sm sm"
+            "co co co co co";
+            column-gap: 10px;
+        }
+        #pageheader{
+            padding: 1rem;
+            background-color: gray;
+            grid-area: ph;
+            min-height: 150px;
+        }
+        #pagelinks{
+            padding: 1rem;
+            background-color: beige;
+            grid-area: pl;
+        }
+        #slideshow{
+            padding: 1rem;
+            background-color: red;
+            grid-area: sl;
+            min-height: 250px;
+        }
+        #parents{
+            padding: 1rem;
+            background-color: pink;
+            grid-area: pa;
+        }
+        #students{
+            padding: 1rem;
+            background-color: blue;
+            grid-area: st;
+        }
+        #board{
+            padding: 1rem;
+            background-color: green;
+            grid-area: bo;
+        }
+        #mission{
+            padding: 1rem;
+            background-color: orange;
+            grid-area: mi;
+        }
+        #engage{
+            padding: 1rem;
+            background-color: lime;
+            grid-area: en;
+        }
+        #news{
+            padding: 1rem;
+            background-color: purple;
+            grid-area: ne;
+        }
+        #calender{
+            padding: 1rem;
+            background-color: lightblue;
+            grid-area: ca;
+        }
+        #twitter{
+            padding: 1rem;
+            background-color: brown;
+            grid-area: tw;
+        }
+        #socialmedaia{
+            padding: 1rem;
+            background-color: lime;
+            grid-area: sm;
+        }
+        #contact{
+            padding: 1rem;
+            background-color: yellow;
+            grid-area: co;
+        }
+        </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="pageheader">#pageheader</div>
+        <div id="pagelinks">#pagelinks</div>
+        <div id="slideshow">#slideshow</div>
+        <div id="parents">#parents</div>
+        <div id="students">"#students</div>
+        <div id="board">#board</div>
+        <div id="mission">#mission</div>
+        <div id="engage">#engage</div>
+        <div id="news">#news</div>
+        <div id="calender">#calender</div>
+        <div id="twitter">#twitter</div>
+        <div id="socialmedaia">#socialmedaia</div>
+        <div id="contact">#contact</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029j3a2aH</title>
+    <style>
+div{
+    margin: auto;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+        #one{
+            background-color: none;
+            background-image: url(Images/atom.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #one:hover{
+            animation-name: scale;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes scale {
+            from{transform: scale();}
+
+            to{transform: scale(1.5);}
+        }
+        #two{
+            background-color: none;
+            background-image: url(Images/tire.png);
+            background-size: contain;
+        }
+        #two:hover{
+            animation-name: rotate;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes rotate {
+            from{transform: rotate(0deg);}
+
+            to{transform: rotate(-260deg);}
+        }
+
+        #three{
+            background-color: none;
+            background-image: url(Images/cloud.png);
+        }
+        #three:hover{
+            animation-name: left;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes left {
+            from{translate: 0px;}
+
+            to{translate: -100px;}
+        }
+
+        #four{
+            background-color: none;
+            background-image: url(Images/superman.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #four:hover{
+            animation-name: right;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes  right {
+            from{translate: 0px;}
+
+            to{translate: 100px 200px; }
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>A029j3a2aH</h1>
+
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+</body>
+</html>

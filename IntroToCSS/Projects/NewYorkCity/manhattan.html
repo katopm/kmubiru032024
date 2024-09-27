@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Manhattan</title>
+    <style>
+        /*Mobile First Styles */
+        body{
+            background-color: balck;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url(Images/bodybackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center bottom;
+        }
+
+        header{
+            background-color: rgba(0, 0, 0, 1);
+            min-height: 100px;
+            padding: 0.7rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: none;
+            z-index: 1;
+            
+        }
+        header h1{
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding-left: 75px;
+            font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+            
+        }
+
+        #wrapper{
+            background-color: none;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            max-width: 1200px;
+            animation-name: spin2;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+
+        #topnav{
+            background-color: #c8380f;
+            min-height: 150px;
+            padding: 1rem;
+            z-index: 1;
+        }
+
+        #topnav ul{
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        #topnav ul li{
+            background-color: none;
+            border: 1px solid silver;
+            padding: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+
+        }
+
+        li:hover{
+            background-color: gray;
+            color:white;
+            text-shadow: red;
+            
+        }
+        li a {
+            color: white;
+        }
+
+        #media{
+            background-color: blue;
+            min-height: 250px;
+            padding: 1rem;
+            background-image: url(Images/media.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        main{
+            background-color: white;
+            min-height: 300px;
+            padding: 1rem;
+            color: black;
+            line-height: 1.7;
+        }
+
+        main h2{
+            text-align: center;
+            font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5;
+        }
+
+        main img{
+            max-width: 100%;
+            height: auto;
+            aspect-ratio:640/360 ;
+            display: block;
+            margin: auto;
+            display: none;
+            z-index: 0;
+        }
+
+        #cards{
+            background-color: #333;
+            min-height: 300px;
+            padding: 1rem;
+        }
+
+        article{
+            background-color: white;
+            min-height: 300px;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer{
+            background-color: #c8380f;
+            min-height: 50px;
+            padding: 1rem;
+        }
+        #logodesktop{
+            display: none;
+        }
+        #cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        #cards article{
+            background-color: red;
+            background-position: center center;
+            background-size: cover;
+            max-width: 400px;
+            aspect-ratio: 400/300;
+            justify-content: center;
+            align-items: flex-end;
+            display: flex;
+        }
+        #cards article h3 {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem;
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+        }
+        article:hover{
+            
+            transition: all 1s;
+        }
+        #bronx{
+            background-image: url(Images/bronxcard.jpg);
+        }
+        #bronx:hover{
+            background-image: url(Images/bronxcardbw.jpg);
+        }
+        #Brooklyn{
+            background-image: url(Images/brooklyncard.jpg);
+        }
+        #Brooklyn:hover{
+            background-image: url(Images/brooklyncardbw.jpg);
+        }
+        #manhattan{
+            background-image: url(Images/manhattancard.jpg);
+        }
+        #manhattan:hover{
+            background-image: url(Images/manhattancardbw.jpg);
+        }
+        #queens{
+            background-image: url(Images/queenscard.jpg);
+        }
+        #queens:hover{
+            background-image: url(Images/queenscardbw.jpg);
+        }
+        #statenisland{
+            background-image: url(Images/statenislandcard.jpg);
+        }
+        #statenisland:hover{
+            background-image: url(Images/statenislandcardbw.jpg);
+        }
+
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+                transform: rotateX(-360deg);
+            }
+            
+        }
+
+        @keyframes spin2 {
+            from{
+                transform: rotate(0deg);
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+                transform: rotateY(-360deg);
+                
+            }
+        }
+        /*Desktop styles */
+        @media screen and (min-width:900px)
+        {
+            #topnav ul{
+                flex-direction: row;
+            }
+
+            #topnav{
+                min-height: 50px;
+                position: sticky;
+                top: 120px;
+            }
+            #topnav ul li{
+                border: none;
+                padding: 0.5rem;
+
+            }
+            li:hover{
+                background-color: black;
+            }
+            header{
+                display: block;
+            }
+
+            #medialogo{
+                display: none;
+            }
+            #wrapper{
+                margin-top: 250px;
+            }
+            #logodesktop{
+                display: block;
+                position: absolute;
+                top: -90px;
+                left: -100px;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+            }
+            
+            main h1{
+                text-align: left;
+            }
+
+            main img{
+                display: block;
+            }
+        }
+
+        #medialogo{
+            background-color: black;
+        }
+
+        #medialogo img{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Manhattan</h1>
+    </header>
+    <div id="medialogo">
+        <img src="Images/newyorklogo.png" alt="New York City Logo">
+    </div>
+
+    <div id="wrapper">
+        <nav id="topnav">
+<img id="logodesktop" src="Images/newyorklogo.png" alt="New York Logo" width="200">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bronx.html">Bronx</a></li>
+                <li><a href="brooklyn.html">Brooklyn</a></li>
+                <li><a href="manhattan.html">Manhattan</a></li>
+                <li><a href="queens.html">Queens</a></li>
+                <li><a href="statenisland.html">Staten Island</a></li>
+            </ul>
+        </nav>
+
+        <div id="media"></div>
+
+        <main>
+            <h2>Welcome to Manhattan</h2>
+
+            <img src="Images/manhattan.jpg" alt="">
+<p>
+                Manhattan is the most densely populated of the five boroughs of New York City. The borough is coterminous with New York County, an original county of the U.S. state of New York. The borough mostly consists of Manhattan Island, bounded by the East, Hudson and Harlem Rivers, but also includes several small adjacent islands and a small area on the mainland. Manhattan has been described as the economic and cultural center of the United States and is home to the United Nations Headquarters. Wall Street in Lower Manhattan is one of the financial capitals of the world, has an estimated GDP of over $1.2 trillion, and is home of both the New York Stock Exchange and NASDAQ. Manhattan's real estate market is among the most expensive in the world, and many multinational media conglomerates are based in the borough.
+    
+</p>
+
+<p>
+                New York County is the most densely populated county in the United States, denser than any individual American city. It is one of the most densely populated areas in the world, with a 2010 population of 1,585,873 living in a land area of 22.96 square miles (59.5 km2), or about 69,071 residents per square mile (26,668/km²). It is also one of the wealthiest counties in the United States, with a 2005 per capita income above $100,000. Manhattan is the third-largest of New York's five boroughs in population, after Brooklyn and Queens, and it is the smallest borough in land area.
+    
+</p>            
+            
+<p>
+                Many districts and landmarks in Manhattan have become well known to New York City's approximately 50 million annual visitors. Times Square, iconified as "The Crossroads of the World" and "The Center of the Universe", is the brightly illuminated hub of the Broadway theatre district, one of the world's busiest pedestrian intersections, and a major center of the world's entertainment industry. The borough hosts many world-renowned bridges, skyscrapers, and parks. Manhattan's Chinatown incorporates the highest concentration of Chinese people in the Western Hemisphere. The Stonewall Inn in Greenwich Village served as the catalyst for the modern gay rights movement. Numerous colleges and universities are located in Manhattan, including Columbia University, New York University, and Rockefeller University, which have been ranked among the top 50 in the world. The city of New York was founded at the southern tip of Manhattan, and the borough houses New York City Hall, the seat of city government.
+    
+</p>            
+            
+<p>
+                The name Manhattan derives from the word Manna-hata, as written in the 1609 logbook of Robert Juet, an officer on Henry Hudson's yacht Halve Maen (Half Moon). A 1610 map depicts the name as Manna-hata, twice, on both the west and east sides of the Mauritius River (later named the Hudson River). The word "Manhattan" has been translated as "island of many hills" from the Lenape language.
+    
+</p>            
+        </main>
+
+        <section id="cards">
+            <article id="bronx"><h3>Bronx</h3></article>
+            <article id="Brooklyn"><h3>Brooklyn</h3></article>
+            <article id="manhattan"><h3>Manhattan</h3></article>
+            <article id="queens"><h3>Queens</h3></article>
+            <article id="statenisland"><h3>SattenIsalnd</h3></article>
+        </section>
+        <footer>
+            &copy; Kato Mubiru 2024
+        </footer>
+    </div>
+</body>
+</html>

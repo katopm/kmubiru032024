@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        
+        #container{
+            display: grid;
+            grid-template-areas:
+            "main main art1 art2"
+            "main main art3 art4"
+            "nav sec1 sec1 aside"
+            "sec2 sec2 footer aside"
+            
+            ;
+            max-width: 1200px;
+            
+            margin: auto;
+        }
+    
+        main{
+            background-color: orange;
+            min-height: 400px;
+            padding: 1rem;
+            grid-area: main;
+            border: 1px solid black;
+        }
+        #article01{
+            background-color: red;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: art1;
+            border: 1px solid black;
+        }
+        #article02{
+            background-color: red;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: art2;
+            border: 1px solid black;
+        }
+        #article03{
+            background-color: red;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: art3;
+            border: 1px solid black;
+        }
+        #article04{
+            background-color: red;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: art4;
+            border: 1px solid black;
+        }
+        nav{
+            background-color: aqua;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: nav;
+            border: 1px solid black;
+        }
+        
+        aside{
+            background-color: blue;
+            min-height: 400px;
+            padding: 1rem;
+            grid-area: aside;
+            border: 1px solid black;
+        }
+        #section01{
+            background-color: brown;
+            min-height: 150px;
+            padding: 1rem;
+            grid-area: sec1;
+            border: 1px solid black;
+        }
+        #section02{
+            background-color: brown;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: sec2;
+            border: 1px solid black;
+        }
+
+        footer{
+            background-color: gray;
+            min-height: 200px;
+            padding: 1rem;
+            grid-area: footer;
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Grid</h1>
+
+    <div id="container">
+        <main>Main</main>
+        <article id="article01">Article01</article>
+        <article id="article02">Article02</article>
+        <article id="article03">Article03</article>
+        <article id="article04">Article04</article>
+        <nav>Nav</nav>
+        <section id="section01">Section01</section>
+        <section id="section02">Section02</section>
+        <footer>Footer</footer>
+        <aside>Aside</aside>
+    </div>
+    
+</body>
+</html>

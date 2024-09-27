@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #000;
+            animation-name: backgroundshift;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes backgroundshift {
+            from{
+                background-color: #000000;
+            }
+            to{
+                background-color: #333333;
+            }
+        }
+        .chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+        h1{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 1rem;
+            border: 4px solid white;
+        }
+        #outercircle{
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            background-color: black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 10px 10px white;
+            cursor: pointer;
+            
+        }
+
+        #outercircle:hover{
+            box-shadow: 4px 4px 35px 10px white;
+        }
+
+        .shake{
+            animation-name: shake;
+            animation-duration: 0.15s;
+            animation-iteration-count: infinite;
+        }
+        #innercircle{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #eight{
+            text-align: center;
+            font-size: 8rem;
+        }
+
+        @keyframes shake {
+            from{margin-top: 0px;}
+            to{margin-top: 50px;}
+        }
+
+        #messagedisplay{
+            background-color: none;
+            background-image: url(Images/triangle.png);
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            background-position: center  top;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color: white;
+            opacity: 0;
+            transition: all 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #messagedisplay p {
+            background-color: none;
+            width: 75px;
+            text-align: center;
+            padding-top: 1rem;
+            font-size: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Magic 8 Ball</h1>
+
+    <div id="outercircle">
+            <div id="innercircle">
+                <h2 id="eight" class="chakra-petch-regular ">8</h2>
+            </div>
+            <div id="messagedisplay"></div>
+    </div>
+
+    <script>
+        //Create a variable for the magic8ball #outercircle
+        const ball = window.document.querySelector('#outercircle');
+        //window.alert(ball.id);
+
+        let innercircle
+        let eight;
+        let messageDisplay;
+
+        innercircle = window.document.querySelector('#innercircle');
+        eight = window.document.querySelector('#eight');
+        messageDisplay = window.document.querySelector('#messagedisplay');
+
+        // Add an event listener to the ball 
+        ball.addEventListener('click', shakeBall);
+
+        // The function
+
+        function shakeBall()
+        {
+            //windiow.alert("working")
+            ball.classList.add("shake")
+
+            messageDisplay.style.opacity = "0"
+
+            eight.style.display ="none";
+            innercircle.style.backgroundColor = "#333";
+            innercircle.style.border = "4px double silver";
+            
+            
+            // Set Timer to remove shake class from ball
+            window.setTimeout(function()
+            {
+                ball.classList.remove('shake')
+            }, 1000)
+
+
+            window.setTimeout(updateMessage, 2500);
+        }
+
+        function updateMessage(){
+            messageDisplay.style.opacity = "1"
+
+            // create messages to display
+
+            let messageText = [];
+            messageText[0] = "<p>It is certain</p>";
+            messageText[1] = "<p>It is decidely so</p>";
+            messageText[2] = "<p>Without a doubt</p>";
+            messageText[3] = "<p>Yes definitely	</p>";
+            messageText[4] = "<p>You may rely on it</p>";
+            messageText[5] = "<p>As I see it, yes</p>";
+            messageText[6] = "<p>Concentrate and ask again</p>";
+            messageText[7] = "<p>Cannot predict now</p>";
+            messageText[8] = "<p>Better not tell you now</p>";
+            messageText[9] = "<p>Ask again later</p>";
+            messageText[10] = "<p>Reply hazy, try again</p>";
+            messageText[11] = "<p>Don’t count on it";
+            messageText[12] = "<p>My reply is no</p>";
+            messageText[13] = "<p>My sources say no</p>";
+            messageText[14] = "<p>Outlook not so good</p>";
+            messageText[15] = "<p>Very doubtful</p>";
+            messageText[16] = "<p>Outlook good</p>";
+            
+            //window.alert(messageText.length);
+
+            let randomNum;
+            randomNum = Math.floor(Math.random() * messageText.length );
+
+            //window.alert(messageText[randomNum]);
+
+
+            // Display the random message
+
+            messageDisplay.innerHTML = messageText[randomNum];
+        }
+    </script>
+</body>
+</html>

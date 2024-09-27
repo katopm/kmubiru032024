@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Box</title>
+    <style>
+        h1{
+
+        }
+        #randombox{
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Color Box</h1>
+    <div id="randombox"></div>
+
+    <script>
+
+        //Create timer change color every milisecond
+        window.setInterval(changeColor, 100)
+
+        function changeColor(){
+            // Create Variables
+        let randomColorBox;
+
+randomColorBox = window.document.querySelector('#randombox');
+randomColorBox.style.backgroundColor = "rgb(255,255,0)"
+
+let red;
+let green;
+let blue;
+
+red = Math.random() * 256;
+green = Math.random() * 256;
+blue = Math.random() * 256;
+
+//Change color of the box again
+randomColorBox.style.backgroundColor = `rgb(${red},${green},${blue})`
+
+        }
+
+
+
+    </script>
+</body>
+</html>

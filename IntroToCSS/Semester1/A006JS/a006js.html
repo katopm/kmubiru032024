@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Functions</title>
+    <style>
+#buttonholder{
+    background-color: silver;
+    border:1px solid black;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#display{
+    background-color:#333333;
+    padding: 1rem;
+    color: white;
+    border-bottom: 1rem solid white;
+
+}
+    </style>
+</head>
+<body>
+    <h1>JavaScript Events and Functions</h1>
+    <h2>A006JS</h2>
+
+    <p>JavaScript is often utilized with events. Computer users interact with Web pages by clicking, double-clicking, dragging, and moving the mouse over various parts of the Web page. Your Web page elements can respond to what the user does by using events. In order to respond to the user's actions, you must set up a response to an event. Your page elements (links, documents, and table rows) have events such as:</p>
+
+<ul>
+    <li><strong>click</strong> - The click event (when something is clicked)</li>
+    <li><strong>dblclick</strong> - The dblclick event (when something is clicked twice)</li>
+    <li><strong>focus</strong> - The focus event (when something receives the tab our mouse 'attention')</li>
+    <li><strong>resize</strong> - The resize event (when the browser is resized)</li>
+    <li><strong>unload</strong> - The unload event (when the page is unloaded - user leaves the page)</li>
+    <li><strong>mouseover</strong> - The mouseover event (when the mouse moves over something)</li>
+    <li><strong>mouseout</strong> - The mouseout event (when the mouse moves away from something after being over)</li>
+</ul>
+
+<p>Once an event is triggered, you will call a function (code snippet) to run your desired code. Here is an example of and event listener on a button variable. We are listening for a click on the button. Once there is a click, we call a fucntion named alertUser.</p>    
+
+<header id="display">
+    <pre>                  buttonOne.adddEventListener('click', alertUser)</pre>
+</header>
+
+<script>
+    
+        // Create variables and assign element
+        const buttonone = window.document.querySelector ('#btnone');
+        const buttonTwo = window.document.querySelector ('#btnTwo');
+        const buttonThree = window.document.querySelector ('#btnThree');
+        // Add event handlers
+        buttonOne.addEventListener('click', theClick);
+        buttonTwo.addEventListener ('dblclick', test); 
+        buttonThree.addEventListener ('mouseover', theMouseOver);
+        // The functions
+        function theClick() {
+            window.alert ('uno!');
+        }
+        function test() {
+            window.alert ('dos!');
+        }
+        function theMouseOver() {
+            window-alert ('tres!');
+        }
+    
+        let display
+        display = window.document.querySelector('#display');
+        display.style.padding = '3rem';
+        display.style.backgroundColor = '#333333';
+        display.style.color = 'white'
+    
+</script>
+    
+
+<display id="buttonholder">
+    
+    <button onclick="theClick()">click</button>
+    <button ondblclick="test()">dblclick</button>
+    <button onmouseover="theMouseOver()">mouseover</button>
+</display>
+</body>
+</html>

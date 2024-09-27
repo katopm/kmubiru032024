@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8Ball SetTimeOut</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #btneight{display: block;
+        margin: auto;
+        padding: 3rem;
+    }
+    </style>
+</head>
+<body>
+    <h1>Magic 8Ball SetTimeOut</h1>
+    <button id="btneight">8</button>
+    <script>
+        //Creste button variable
+        let btn8;
+
+        //Assign a value to button
+        btn8 = window.document.querySelector("#btneight");
+
+        btn8.style.borderRadius = "50%"
+
+        // Add event listener
+        btn8.addEventListener("click", shakeBall);
+
+        function shakeBall() {
+            // Shake the ball
+            btn8.style.padding = "10rem"
+            setTimeout(displayMessage, 3000);
+        }
+
+        function displayMessage(){
+            window.alert("It is certain");
+        }
+    </script>
+</body>
+</html>

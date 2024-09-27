@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Window Object</title>
+<style>
+    body{font-family: 'Courier New', Courier, monospace;
+    background-color:red;
+    
+    }
+</style>
+</head>
+<body>
+    <h1>Window Object</h1>
+
+    <h2>Window Methods (actions)</h2>
+    <ul>
+        <li>prompt()</li>
+        <li>alert()</li>
+        <li>confrim()</li>
+        <li>close()</li>
+    </ul>
+
+    <h2>Window Properties (descriptors)</h2>
+    <ul>
+        <li>location</li>
+        <li>innerWidth</li>
+    </ul>
+
+    <script>
+// This is a JavaScript comment
+// The Window Object
+
+// Window Methods
+// Ask a question
+window.prompt("Are you happy?")
+
+//Alert the user
+window.alert("Alert: You have a virus!")
+
+//Get cofimation from user
+window.confirm("Do you want to close the tab?")
+
+
+
+//Window Properties
+window.alert(window.location);
+
+window.alert(window.innerWidth);
+
+//Window Timer
+//window.setTimeout(5000, (window.location = 'https://yahoo.com/'));
+window.document.body.style.backgroundColor = 'red';
+
+    </script>
+
+</body>
+</html>

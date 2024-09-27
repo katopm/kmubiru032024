@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1, p{
+            padding: 1rem;
+        }
+        header#pageheader{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid silver;
+        }
+        img#hamburgermenu{
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+        footer#pagefooter{
+            display: flex;
+        }
+        img#locationpin{
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        /* Model styling */
+        div#modalmap{
+            background-color: rgba(0, 0, 0, .8);
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        #closex{
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        iframe{
+            margin: auto;
+            display: block;
+            border: 2px solid white;
+            width: 75%;
+            aspect-ratio: 9/16;
+        }
+
+        @media screen and (min-width:480px){
+            body{background-color: red;}
+            iframe{
+                aspect-ratio: 1/1;
+            }
+        }
+        @media screen and (min-width:768px){
+            body{background-color: blue;}
+            iframe{
+                aspect-ratio: 16/9;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+        <!--Begin Modal Menu-->
+        <div id="modalmap">
+            <img src="Images/closex.png" alt="X" id="closex">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824725.9507285139!2d-120.97175983944705!3d36.152298512447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8094681e8855560b%3A0x40c4fb7966f22a68!2sChuck%20E.%20Cheese!5e0!3m2!1sen!2sus!4v1717094434885!5m2!1sen!2sus"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!--End Modal Menu-->
+    
+        <header id="pageheader">
+            <h1>Google Maps</h1>
+            <img src="Images/hamburgermenu.png" alt="hamburgermenu icon" id="hamburgermenu">
+        </header>
+
+        
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam asperiores earum, ut, architecto modi iure, maxime laudantium provident cum numquam qui tempora. Ab eos ipsum laudantium qui dolore animi culpa cud earum, corporis explicabo atque corrupti commodi ipsa eligendi, doloremque quia, impedit distinctio doloribus deleniti! Neque doloremque vitae sequi quaerat.</p>
+        
+            <footer id="pagefooter">
+                <p>Location</p>
+                <img src="Images/locationpin.png" alt="Location Pin" id="locationpin">
+            </footer>
+
+        <script>
+            //display
+            //create a variable and assign at once
+            const locationPin = window.document.querySelector('#locationpin');
+            locationPin.addEventListener('click', displayModalMap);
+
+            
+
+            function displayModalMap(){
+                //create a variavble and assign at once
+                const showModalMap = window.document.querySelector('#modalmap');
+                showModalMap.style.display = "flex";
+            }
+
+            //hide
+            //create a variable and assign at once
+            const closeMenu = window.document.querySelector('#closex');
+            closeMenu.addEventListener('click', closeModalMap);
+
+            //hide the map with the escape key (esc which is 27)
+            window.document.addEventListener('keydown', function(e){
+                if(e.keyCode == 27){ 
+                    closeModalMap();
+                }
+            })
+            
+
+            function closeModalMap(){
+                const closeModal = window.document.querySelector('#modalmap');
+                closeModal.style.display = 'none';
+            }
+        </script>
+    </body>
+</html>

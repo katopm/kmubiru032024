@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons + JavaScript</title>
+    <style>
+        button{
+            background-color:aqua;
+            border-radius: 25px;
+            padding: 0.5rem;
+        }
+        .display{
+            height: 100px;
+            width: 100px;
+            background-color:orange;
+            margin: 2rem auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeDivOne()">Change Div 1</button>
+    <button ondblclick="modifyDivDos()">Change Div 2</button>
+    <button onclick="rotateDiv3()">Change Div 3</button>
+    <button>Change Div 4</button>
+
+    <hr />
+
+    <!-- div.display#$$*4-->
+    <div class="display" id="d001">d001</div>
+    <div class="display" id="d002">d002</div>
+    <div class="display" id="d003">d003</div>
+    <div class="display" id="d004">d004</div>
+    <script>
+        // Create functions
+        function changeDivOne()
+        {
+            //Create a varible
+            let d1;
+            //Assign a value to teh variable
+            d1 = window.document.querySelector('#d001');
+            
+            //window.alert(d1);
+            window.alert(d1);
+            d1.style.backgroundColor = 'blue';
+            d1.style.color = 'white';
+        }
+
+        function modifyDivDos()
+        {
+            let div2;
+            div2 = window.document.querySelector('#d002');
+            div2.style.borderRadius = '50%';
+        }
+
+        function rotateDiv3()
+        {
+            let div3;
+            div3 = window.document.querySelector('#d003');
+            div3 = style.borderRadius = '20%'
+        }
+    </script>
+</body>
+</html>

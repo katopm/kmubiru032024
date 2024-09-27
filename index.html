@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kato Mubiru - Portfolio </title>
+
+    <style>
+        body{
+            background-color: #86d1d3;
+        }
+        :root{
+            --color-primary: beige;
+            --color-secondary: gray;
+            --color-tertiary: pink;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .container{
+            background-color: white;
+            min-height: 10rem;
+            max-width: 75rem;
+            margin: auto;
+            padding: 1rem 3rem 1rem 3rem;
+            position: relative;
+            border: 1px solid black;
+        }
+
+        #pageheader{
+            min-height: 200px;
+            background-color: var(--color-primary);
+            padding: 1rem;
+        }
+
+        #pageheader .container{
+            background-color: none;
+        }
+
+        #logo{
+            width: 200px;
+            height: 200px;
+            /* background-color: var(--color-primary); */
+            position: absolute;
+            top: -15px;
+            left: calc(50% - 100px);
+            border-radius: 50%;
+            transition: all 2s;
+            background-image: url(Images/logo.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        #pagenav{
+            background-color: none;
+            min-height: 40px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            bottom: 0px;
+            left: calc(50% - 150px);
+        }
+
+        #pagenav a{
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            
+        }
+        #media{
+            min-height: 400px;
+            background-color: var(--color-secondary);
+            padding: 1rem;
+        }
+
+        #media h1{
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        #media h2{
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        #media blockquote{
+            background-color: none;
+            max-width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+
+        iframe{
+            width: 80%;
+            margin: auto;
+            display: block;
+            aspect-ratio: 16/9;
+            
+            
+        }
+        #career{
+            min-height: 200px;
+            background-color: var(--color-secondary);
+            padding: 1rem;
+        }
+        #pagecontent{
+            min-height: 200px;
+            background-color: beige;
+            padding: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+        #semester1{
+            min-height: 200px;
+            background-color: var(--color-secondary);
+            padding: 1rem;
+        }
+        #semester2{
+            min-height: 200px;
+            background-color: none;
+            padding: 1rem;
+            display: none;
+        }
+        #pagefooter{
+            
+            background-color: none;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        #pagefooter .container{
+            min-height: 2rem;
+        }
+        #subfooter{
+            min-height: 200px;
+            background-color: var(--color-secondary);
+            padding: 1rem;
+        }
+
+        #top{
+            min-width: 20px;
+            min-height: 20px;
+            padding: 1rem;
+            background-color: gray;
+            border: 5px solid black;
+            text-align: center;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            
+        }
+
+        #top a{
+            color: black;
+            text-decoration: none;
+            
+        }
+
+
+        /* Media Queries */
+        @media only screen and (min-width:320px) 
+        {
+
+        }
+        @media only screen and (min-width:480px) 
+        {
+            
+        }
+        @media only screen and (min-width:768px) 
+        {
+            
+        }
+        @media only screen and (min-width:1024px) 
+        {
+            #pagenav{
+                background-color: none;
+                top: 0px;
+                right: 0px;
+                left: auto;
+                bottom: auto;
+            }
+
+            #logo{left: 25px;}
+
+            #media{
+                height: 420px;
+            }
+            iframe{
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            display: block;
+        }
+
+        #pageheader .container{
+            min-height: 4rem;
+        }
+        }
+        
+        @media only screen and (min-width:1200) 
+        {
+        
+        }
+        
+ 
+
+        @media screen and (min-width: 900px) 
+        {
+            #logo{
+                left: -60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a name="topanchor"></a>
+
+        <!-- Begin pageheader -->
+        <header id="pageheader">
+    
+            
+            
+    
+            <div class="container">
+                <div id="logo"></div>
+                <nav id="pagenav">
+                    <a href="#career">Career</a> 
+                    |
+                    <a href="#semester1">Semester 1</a>
+                    |
+                    <a href="#semester2">Semester 2 </a>
+                </nav>
+            </div>
+        </header>
+        <!-- End pageheader -->
+    
+        <!-- begin showcase -->
+        <section id="media">
+    
+    <h1>Kato Mubiru</h1>
+    <h2>Portfolio</h2>
+    <blockquote>I like women. I love women.
+        - A$AP Rocky
+    </blockquote>
+    
+            <!-- <iframe  src="https://www.youtube.com/embed/d1EnW4kn1kg?si=a6DkKd417UvQjPVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    
+        </section>
+        <!-- end showcase -->
+    
+        
+        <!-- begin pagecontent -->
+        <main id="pagecontent">
+            
+            <h2>Introduction</h2>
+            
+            <div class="container">
+                <p>Hello and welcome to my Webpage! I have been creating and making Webpages for three years now and I was taught by the one and only Mr.Chagoyan. In those 3 years i have made new friends and learned new skills. Outside of school I like do other things other than coding such as playing sports which include basketball, track, and some football for fun. I look foward to learning things this year and meet new people and have a good year. </p>
+            </div>
+        </main>
+        <!-- end pagecontent -->
+        
+        <!-- begin career -->
+        <section id="career">
+            <div class="container">
+            
+                <a name="career"></a>
+                
+                <h2>career</h2>
+                <ul></ul>
+                    <li>Letter of Introduction</li>
+                    <li>Resume</li>
+                    <li>References</li>
+                    <li>Jop Application</li>
+                    <li>Career Plan</li>
+                    <li>Work Samples</li>
+                    <li>Certificates</li>
+                </ul>
+            </div>
+        </section>
+        <!-- end career -->
+        
+        <!-- begin semesters -->
+        <section id="semester1">
+            <div class="container">
+                <a name="semester1"></a>
+                <h2>semester1</h2>
+                <ul>
+                    <li>A001</li>
+                    <li>A002</li>
+                    <li>A003</li>
+                    <li>A004</li>
+                </ul>
+            </div>
+        </section>
+        <!-- end semesters -->
+        
+        <!-- begin semesters -->
+        <section id="semester2">
+            <div class="container">
+                <a name="semester2"></a>
+                <h2>semester2</h2>
+                <ul>
+                    <li>A001</li>
+                    <li>A002</li>
+                    <li>A003</li>
+                    <li>A004</li>
+                </ul>
+            </div>
+        </section>
+        <!-- end semesters -->
+    
+    
+        <!-- begin pagefooter -->
+        <footer id="pagefooter">
+            <div class="container">
+    
+                <a href="https://chsserver01.org/" target="new">chago</a> | 
+                <a href="https://coolors.co/" target="new">color scheme</a> | 
+                <a href="https://coalingahuron.aeries.net/" target="new">aeries</a> | 
+                <a href="https://chs.chusd.org/" target="new">chs</a> | 
+                <a href="https://mycareertech.com/login" target="new">mycareertech</a> |
+                <a href="https://classroom.google.com/u/0/h" target="new">classroom</a> | 
+                <a href="codepen.com" target="new">codepen</a> | 
+                <a href="https://app.minga.io/home" target="new">minga</a>
+    
+            </div>
+        </footer>
+        <!-- end pagefooter -->
+        
+        <!-- begin subfooter -->
+        <footer id="subfooter">
+    
+            subfooter 
+    
+            <div class="container">subfooter</div>
+        </footer>
+        <!-- end subfooter -->
+<div id="top">
+    <a href="#topanchor">Top</a>
+</div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        /* Mobile first disign*/
+        body{
+            background-color: yellow;
+        }
+        div#container{
+            background-color: red;
+            padding: 1rem;
+            border-radius: 2rem;
+            width: 80%;
+            margin: 0 auto;
+            min-height: 500px;
+        }
+
+        /* Response Style for bigger Screens/Devices*/
+        @media screen and (min-width:376px)
+        {
+            body{
+                background-color: purple;
+            }
+            div#container{
+                background-color: green;
+            }
+        }
+
+        @media screen and (min-width:400px)
+        {
+            body{background-color: black;}
+            div#container{ background-color: blue;}
+        }
+        @media screen and (min-width:600px)
+        {
+            body{background-color: yellowgreen;}
+            div#container{ background-color: pink;}
+        }
+        @media screen and (min-width:768px)
+        {
+            body{background-color: orange;}
+            div#container{ background-color: black;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Media Queries</h1>
+
+<div id="container">#container</div>
+</body>
+</html>

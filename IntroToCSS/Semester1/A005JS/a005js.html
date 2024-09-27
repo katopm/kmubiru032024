@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Changing Properties</title>
+    <style>
+    
+        span.comment{
+            color: green;
+        }
+        span.tag{
+            color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>JavaScript Changing Properties</h1>
+    <h2>A005JS</h2>
+
+    <p>As previously noted, JavaScript is a scripting language that uses objects. For example, your browser window is an object, which contains the document object. The document object, in turn, contains the body object, which includes the style object.</p>
+
+<p>We can refer to these objects via JavaScript by using <strong>dot notation.</strong> For example, "window.document.body.style"</p>
+
+<p>Using dot notation, we can access objects and change their properties.</p>
+
+<p>The following dot notation reference can change two properties of the body.style object. We use window.document.body.style to access that object. These properties are referenced with the following code:</p>
+
+<strong>window.document.body.style.backgroundColor</strong> - This property is the background color of the body. <br>
+<strong>window.document.body.style.color</strong> - This property is the text color of the body.
+
+<p>Here, we <strong>change </strong>the window.document.body.style. properties as follows:</p>
+
+<header id="display">
+   <code>
+        <span class="tag"><p>&lt;script&gt;</p></span>
+        <p><span class="comment">// Change the style object properties</span></p>
+        <span class="comment">// Change the background color </span> <br>
+        window.document.body.style.backgroundColor="indianred"; <br>
+        <p></p>
+        <span class="comment">// Change text color </span><br>
+        window.document.body.style.color="white";
+        <span class="tag"><p>&lt;/script&gt;</p></span>
+   </code>
+    
+</header>
+<script>
+    let display
+    display = window.document.querySelector('#display');
+    display.style.padding = '3rem';
+    display.style.backgroundColor = '#333333';
+    display.style.color = 'white'
+</script>
+
+</body>
+</html>

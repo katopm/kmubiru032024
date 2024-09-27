@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Brooklyn</title>
+    <style>
+        /*Mobile First Styles */
+        body{
+            background-color: balck;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url(Images/bodybackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center bottom;
+        }
+
+        header{
+            background-color: rgba(0, 0, 0, 1);
+            min-height: 100px;
+            padding: 0.7rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: none;
+            z-index: 1;
+            
+        }
+        header h1{
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding-left: 75px;
+            font-family: "Sedgwick Ave Display", cursive;
+  font-weight: 400;
+  font-style: normal;
+            
+        }
+
+        #wrapper{
+            background-color: none;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            max-width: 1200px;
+            animation-name: spin2;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+
+        #topnav{
+            background-color: #c8380f;
+            min-height: 150px;
+            padding: 1rem;
+            z-index: 1;
+        }
+
+        #topnav ul{
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        #topnav ul li{
+            background-color: none;
+            border: 1px solid silver;
+            padding: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+
+        }
+
+        li:hover{
+            background-color: gray;
+            color:white;
+            text-shadow: red;
+            
+        }
+        li a {
+            color: white;
+        }
+
+        #media{
+            background-color: blue;
+            min-height: 250px;
+            padding: 1rem;
+            background-image: url(Images/media.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        main{
+            background-color: white;
+            min-height: 300px;
+            padding: 1rem;
+            color: black;
+            line-height: 1.7;
+        }
+
+        main h2{
+            text-align: center;
+            font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5;
+        }
+
+        main img{
+            max-width: 100%;
+            height: auto;
+            aspect-ratio:640/360 ;
+            display: block;
+            margin: auto;
+            display: none;
+            z-index: 0;
+        }
+
+        #cards{
+            background-color: #333;
+            min-height: 300px;
+            padding: 1rem;
+        }
+
+        article{
+            background-color: white;
+            min-height: 300px;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer{
+            background-color: #c8380f;
+            min-height: 50px;
+            padding: 1rem;
+        }
+        #logodesktop{
+            display: none;
+        }
+        #cards{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        #cards article{
+            background-color: red;
+            background-position: center center;
+            background-size: cover;
+            max-width: 400px;
+            aspect-ratio: 400/300;
+            justify-content: center;
+            align-items: flex-end;
+            display: flex;
+        }
+        #cards article h3 {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem;
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+        }
+        article:hover{
+            
+            transition: all 1s;
+        }
+        #bronx{
+            background-image: url(Images/bronxcard.jpg);
+        }
+        #bronx:hover{
+            background-image: url(Images/bronxcardbw.jpg);
+        }
+        #Brooklyn{
+            background-image: url(Images/brooklyncard.jpg);
+        }
+        #Brooklyn:hover{
+            background-image: url(Images/brooklyncardbw.jpg);
+        }
+        #manhattan{
+            background-image: url(Images/manhattancard.jpg);
+        }
+        #manhattan:hover{
+            background-image: url(Images/manhattancardbw.jpg);
+        }
+        #queens{
+            background-image: url(Images/queenscard.jpg);
+        }
+        #queens:hover{
+            background-image: url(Images/queenscardbw.jpg);
+        }
+        #statenisland{
+            background-image: url(Images/statenislandcard.jpg);
+        }
+        #statenisland:hover{
+            background-image: url(Images/statenislandcardbw.jpg);
+        }
+
+        @keyframes spin {
+            from{
+                transform: rotate(0deg);
+                transform: rotateX(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+                transform: rotateX(-360deg);
+            }
+            
+        }
+
+        @keyframes spin2 {
+            from{
+                transform: rotate(0deg);
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+                transform: rotateY(-360deg);
+                
+            }
+        }
+        /*Desktop styles */
+        @media screen and (min-width:900px)
+        {
+            #topnav ul{
+                flex-direction: row;
+            }
+
+            #topnav{
+                min-height: 50px;
+                position: sticky;
+                top: 120px;
+            }
+            #topnav ul li{
+                border: none;
+                padding: 0.5rem;
+
+            }
+            li:hover{
+                background-color: black;
+            }
+            header{
+                display: block;
+            }
+
+            #medialogo{
+                display: none;
+            }
+            #wrapper{
+                margin-top: 250px;
+            }
+            #logodesktop{
+                display: block;
+                position: absolute;
+                top: -90px;
+                left: -100px;
+                animation-name: spin;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+            }
+            
+            main h1{
+                text-align: left;
+            }
+
+            main img{
+                display: block;
+            }
+        }
+
+        #medialogo{
+            background-color: black;
+        }
+
+        #medialogo img{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Brooklyn </h1>
+    </header>
+    <div id="medialogo">
+        <img src="Images/newyorklogo.png" alt="New York City Logo">
+    </div>
+
+    <div id="wrapper">
+        <nav id="topnav">
+<img id="logodesktop" src="Images/newyorklogo.png" alt="New York Logo" width="200">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bronx.html">Bronx</a></li>
+                <li><a href="brooklyn.html">Brooklyn</a></li>
+                <li><a href="manhattan.html">Manhattan</a></li>
+                <li><a href="queens.htmls">Queens</a></li>
+                <li><a href="statenisland.html">Staten Island</a></li>
+            </ul>
+        </nav>
+
+        <div id="media"></div>
+
+        <main>
+            <h2>Welcome to Brooklyn</h2>
+
+            <img src="Images/brooklyn.jpg" alt="Brooklyn">
+<p>
+                Brooklyn is the most populous of New York City's five boroughs, with about 2.5 million people, and the second-largest in area. Since 1896, Brooklyn has had the same boundaries as Kings County, which is the most populous county in New York and the second-most densely populated county in the United States, after New York County (Manhattan). It is also the westernmost county of the City of New York on Long Island. Today, if it were an independent city, Brooklyn would rank as the fourth most populous city in the U.S., behind only the other boroughs of New York combined, Los Angeles, and Chicago.
+    
+</p>
+
+<p>
+                Brooklyn was an independent city until January 1, 1898 when, according to the Charter of "Greater New York", Brooklyn was consolidated with the other boroughs to form the modern "City of New York". It continues to maintain a distinct culture. Many Brooklyn neighborhoods are ethnic enclaves where particular ethnic groups and cultures predominate. Brooklyn's official motto is Eendraght Maeckt Maght. Written in the (early modern spelling of the) Dutch language, it is inspired by the motto of the United Dutch Provinces (currently the official motto of Belgium) and translated "In unity, there is strength." The motto is displayed on the borough seal and flag, which also feature a young robed woman bearing fasces, a traditional emblem of Republicanism. Brooklyn's official colors are blue and gold.
+    
+</p>            
+            
+<p>
+                The Dutch were the first Europeans to settle in the area on the western end of Long Island, also inhabited by a Native American people, the Lenape (often referred to in contemporary colonial documents by the Lenape place-name for one of the larger native settlements:"Canarsee"). The first Dutch settlements, established in 1634, were called Midwout (Midwood) and Vlacke Bos (Flatbush). The Dutch also purchased land during the 1630s from the Lenape in present-day Gowanus, Red Hook, the Brooklyn Navy Yard, and Bushwick.
+    
+</p>            
+            
+<p>
+                The Village of Breuckelen, named for Breukelen in the province of Utrecht in the Netherlands, was authorized by the Dutch West India Company in 1646; it became the first municipality in what is now New York State. At the time, Breuckelen was part of New Netherland. Other villages were later incorporated into Brooklyn: Boswijk (Bushwick), Nieuw Utrecht (New Utrecht), and Nieuw Amersfoort (Flatlands). A few houses and cemeteries still show the Dutch origins of the borough of Brooklyn, including the oldest house of New York City, the Pieter Claesen Wyckoff House in Flatlands.
+    
+</p>            </main>
+
+        <section id="cards">
+            <article id="bronx"><h3>Bronx</h3></article>
+            <article id="Brooklyn"><h3>Brooklyn</h3></article>
+            <article id="manhattan"><h3>Manhattan</h3></article>
+            <article id="queens"><h3>Queens</h3></article>
+            <article id="statenisland"><h3>SattenIsalnd</h3></article>
+        </section>
+        <footer>
+            &copy; Kato Mubiru 2024
+        </footer>
+    </div>
+</body>
+</html>

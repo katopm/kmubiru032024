@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartacus Logical Operators</title>
+    <style>
+        
+    </style> 
+</head>
+<body>
+    <h1>Spartacus Logical Operators</h1>
+    <script>
+
+        // Logical Operators  
+        // AND && - All conditions must be true to evauluate as true.
+        // = OR || - At least one condition must be true to evauluate as true.
+        // NOT ! - Set value to opposite vaule !true == false and !false == true
+
+
+// Create variables
+let age;
+let height;
+let weight;
+let sex;
+let name;
+let isGladiator;
+
+// Assign value to variables
+
+age = 25;
+height = 73;
+weight = 235;
+sex = "male";
+name = "Spartacus";
+isGladiator = false;
+
+
+// Qualify as a Gladiator
+
+if( age > 18 && height > 72 && weight >= 200){
+
+console.log("You are a Gladiator, " + name + ".");
+isGladiator = true;
+
+}
+else{
+    console.log("You are not a Gladiator," + name + ".");
+    isGladiator = false;
+}
+// The Emperor has final say
+console.log("The emperor say's, the gladiator " + name +  "is equal to " + !isGladiator);
+
+
+
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        div{
+            height:200px;
+            width:200px;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+        div#one{
+            background-color: red;
+            
+        }
+        div#one:hover{
+            background-color: wheat;
+            transition: all 2s;
+            height: 100px;
+        }
+        div#two{
+            background-color: blue;
+            transition-delay: 2s;
+        }
+        div#two:hover{
+            background-color: pink;
+            transition-delay: 2s;
+            transition: all 2s;
+        }
+        div#three{
+            background-color: orange;
+        }
+        
+        div#three:hover{
+            background-color: brown;
+            transition: ease-out;
+            transition: all 2s;
+            width: 500px;
+        }
+
+        div#four{
+            background-color: green;
+        }
+
+        div#four:hover{
+            background-color: black;
+            transition: ease-in;
+            transition: all 2s;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>A029J3A2</h1>
+
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+</body>
+</html>

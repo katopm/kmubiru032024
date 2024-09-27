@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2GRFX - Complex Transitions
+    </title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        div{
+            height:200px;
+            width:200px;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 40px;}
+            #box{
+                width: 400px;
+            }
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: none;
+            background-image: url(Images/plane.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition-duration: 2s;
+            
+        }
+        
+        #box:hover{
+            transform: translate(-400px);
+            width: 400px;
+        }
+
+        #two{
+            height: 200px;
+            width: 200px;
+            background-color: none;
+            background-image: url(Images/seed.png);
+            transition: all 3s;
+            background-size: cover;
+            transition-delay: 2s;
+        }
+
+        #two:hover{
+            background-image: url(Images/tree.png);
+            background-size: cover;
+            height: 300px;
+            
+        }
+
+        #three{
+            height: 200px;
+            width: 200px;
+            background-color: none;
+            background-image: url(Images/baby.png);
+            background-repeat: no-repeat;
+            transition: all 3s;
+        }
+        
+        #three:hover{
+            background-image: url(Images/man.png);
+            background-size: cover;
+            height: 300px;
+        }
+
+        #four{
+            height: 200px;
+            width: 200px;
+            background-color: none;
+            background-image: url(Images/car.png);
+            transition-duration: all 2s;
+            transition-property: all;
+            background-repeat: no-repeat;
+            transition-timing-function: linear;
+            transition: all 2s;
+        }
+
+        #four:hover{
+            transform: translate(-400px);
+        }
+    </style>
+</head>
+<body>
+    <h1>A029J3A2GRFX - Complex Transitions</h1>
+
+    <div id="box"><div id="one"></div></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+</body>
+</html>

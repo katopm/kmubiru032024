@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Variables - Dom Object, Event, Function</title>
+    <style>
+        div{
+            height: 150px;
+            width: 150px;
+            border: 4px solid black;
+            padding: 1rem;
+            margin: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variables - Dom Object, Event, Function</h1>
+
+    <div id="d1" onclick="changeRed('d1!')">d1</div>
+    <div id="d2" onmousemove="changeBlue('d2!')">d2</div>
+    <div id="d3" ondblclick="changePink('d3!')">d3</div>
+    <div id="d4">d4</div>
+
+    <script>
+        
+
+        
+        // Creat functions
+        // A function is code block that runs when clled
+        // A function is a mini program
+        function changeRed(){
+            // Style using dot notation
+        window.document.getElementById('d1').style.backgroundColor = 'red';
+        
+        }
+
+        function changeBlue()
+        {
+            window.document.getElementById('d2').style.borderRadius = '50%';
+            window.document.getElementById('d2').style.padding = '2rem;'
+        }
+
+        function changePink()
+        {
+            // Create DOM object variable
+
+            let myDiv;
+            myDiv = window.document.getElementById('d3');
+            myDiv.style.backgroundColor = 'pink';
+            myDiv.style.border = '4px solid red';
+            myDiv.style.marginleft = '500px';
+            myDiv.style.transform = 'scale(.25)';
+        }
+    </script>
+</body>
+</html>v 

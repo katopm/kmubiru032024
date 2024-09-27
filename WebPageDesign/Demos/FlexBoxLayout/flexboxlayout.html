@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+    body{background-color: beige;}
+    #wrapper{
+    border: 3px solid lightblue;
+    max-width: 1024px;
+    margin: auto;
+}
+    div{background-color: pink;
+    min-height: 100px;
+    border: 1px solid black;
+}
+    #flexbox001{display: flex;
+}
+    #one{flex-basis: 50%;
+    background-color: aqua;
+}
+    #two{flex-basis: 50%;
+    background-color: darkcyan;
+}
+    #flexbox002{display: flex ;
+}
+    #three{flex-basis: 25%;
+    background-color: red;
+}
+    #four{flex-basis: 50%;
+    background-color: orange;
+}
+    #five{
+    flex-basis: 25%;
+    background-color: green;
+}
+    #flexbox003{
+        display: flex;
+}
+    #six, #seven, #eight, #nine{
+        flex-basis: 25%;
+}
+    #seven{background-color: bisque;
+}
+
+    </style>
+</head>
+<body>
+        <div id="wrapper">
+<div id="flexbox001">
+        <div id="one">one</div>
+        <div id="two">Two</div>
+</div>
+
+        <div id="flexbox002">
+            <div id="three">Three</div>
+            <div id="four">Four</div>
+            <div id="five">Five</div>
+        </div>
+        
+        <div id="flexbox003">
+            <div id="six">Six</div>
+            <div id="seven">Seven</div>
+            <div id="eight">Eight</div>
+            <div id="nine">Nine</div>
+
+        </div> 
+
+
+
+    </div>
+    <!-- end the wrap -->
+</body>
+</html>

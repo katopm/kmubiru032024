@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budpest</title>
+    <style>
+        body{
+            background-color: #8fcff7;
+            background-image: url(Images/budapestheader.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin-top: 100px;
+        }
+        #wrapper{
+            width: 90%;
+            max-width: 1024px;
+            margin: auto;
+            border: 2px solid black ;
+            box-shadow: 0px 0px 10px 10px white;
+        }
+        #pageheader{
+            min-height: 150px;
+            background-color: red;
+            background-image: url(Images/budapestsmall.jpg);
+            background-size: auto;
+            position: relative;
+        }
+        #logoheader{
+            position: absolute;
+            background-color: none;
+            height: 200px;
+            width: 235px;
+            transition: all 1s;
+            background-image:url(Images/budapestlogo.png);
+            position: absolute;
+            top: -70px;
+            left: -70px;
+        }
+        #logoheader:hover{
+            transform: rotate(45deg);
+        }
+        #media{
+            background-color: #9a2c24;
+            min-height: 350px;
+            padding: .5rem;
+        }
+        #mainnav{
+            background-color: #9a2c24;
+            padding: .5rem;
+            
+
+        }
+        #mainnav ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        main{
+            background-color: white;
+            color:#333;
+            min-height: 500px;
+            flex-basis: 100%;
+
+        }
+        footer{
+            min-height: 50px;
+            padding: .5rem;
+            background-color: #c4443b;
+            color: white;
+            text-align: center;
+        }
+        iframe{
+            width: 80%;
+            margin: auto;
+            display: block;
+            aspect-ratio: 560/315;
+        }
+        #fb001{
+            display: flex;
+            border: 1px solid black;
+
+        }
+        #mainnav>ul{
+            list-style-type: none;
+            padding: .25rem;
+            background-color: none;
+        }
+
+        #mainnav a {
+            color: white
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+    
+<div id="wrapper" >
+        <header id="pageheader">
+
+            <div id="logoheader"></div>
+
+
+        </header>
+        <div id="media">#media 
+            <iframe src="https://www.youtube.com/embed/luDSbWpzWG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+            <nav id="mainnav">
+                <ul>
+                    <li>
+                        <a href="index.html">Home<a >
+
+                    </li>
+                    <li>
+                        <a href="ststephensbasilica.html">St. Stephen's basilica</a>
+                    </li>
+                    <li>
+                    <a href="fishermansbasitica.html"> Fisherman's Basitica </a>
+                    </li>
+                    <li>
+                        <a href="budacastle.html">Buda Castle </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+<div id="fb001">
+                <main>
+    
+                    <h1>Welcome to Budapest </h1>
+    
+                </main>
+        </div>
+        
+        <footer>
+            &copy; Mubiru 2023
+            
+
+        </footer>
+
+        
+</div>
+</body>
+</html>
