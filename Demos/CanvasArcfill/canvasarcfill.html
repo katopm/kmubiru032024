@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Arc Fill</title>
+</head>
+<body>
+    <h1>Canvas Arc Fill</h1>
+    
+    <canvas id="canvasone"></canvas>
+
+    <script>
+        const canvasone = window.document.querySelector('#canvasone');
+        const ctx = canvasone.getContext ('2d')
+
+        // Configure canvas
+        canvasone.width = 800;
+        canvasone.height = 400;
+        canvasone.style.border = '1px solid black';
+
+        // Draw cirlce
+
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 10;
+        ctx.fillStyle = 'blue';
+
+
+        ctx.beginPath();
+        ctx.arc(400, 200, 75, 0, Math.PI,)
+        ctx.stroke()
+        ctx.fill()
+        </script>
+
+    
+</body>
+</html>

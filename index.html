@@ -56,7 +56,7 @@
         #pagenav{
             background-color: none;
             min-height: 40px;
-            width: 300px;
+            min-width: 400px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -114,12 +114,22 @@
             padding: 1rem;
             font-family: Arial, Helvetica, sans-serif;
             font-size: large;
+        
+        }
+        #keyassignments{
+            min-height: 200px;
+            background-color: beige;
+            padding: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        
         }
         #semester1{
             min-height: 200px;
             background-color: var(--color-secondary);
             padding: 1rem;
         }
+        a {color: black;}
         #semester2{
             min-height: 200px;
             background-color: none;
@@ -141,7 +151,9 @@
             background-color: var(--color-secondary);
             padding: 1rem;
         }
-
+.footerlinks{
+    display: none;
+}
         #top{
             min-width: 20px;
             min-height: 20px;
@@ -174,7 +186,14 @@
         }
         @media only screen and (min-width:768px) 
         {
-            
+            #flexsubfooter{
+                display: flex;
+                justify-content: space-between;
+            }
+            .footerlinks{
+                display: block;
+                min-width: 250px;
+            }
         }
         @media only screen and (min-width:1024px) 
         {
@@ -255,8 +274,10 @@
                     <a href="#career">Career</a> 
                     |
                     <a href="#semester1">Semester 1</a>
+                    <!-- |
+                    <a href="#semester2">Semester 2 </a> -->
                     |
-                    <a href="#semester2">Semester 2 </a>
+                    <a href="#keyassignments">Key Assignments</a>
                 </nav>
             </div>
         </header>
@@ -277,16 +298,7 @@
         <!-- end showcase -->
     
         
-        <!-- begin pagecontent -->
-        <main id="pagecontent">
-            
-            <h2>Introduction</h2>
-            
-            <div class="container">
-                <p>Hello and welcome to my Webpage! I have been creating and making Webpages for three years now and I was taught by the one and only Mr.Chagoyan. In those 3 years i have made new friends and learned new skills. Outside of school I like do other things other than coding such as playing sports which include basketball, track, and some football for fun. I look foward to learning things this year and meet new people and have a good year. </p>
-            </div>
-        </main>
-        <!-- end pagecontent -->
+       
         
         <!-- begin career -->
         <section id="career">
@@ -314,7 +326,7 @@
                 <a name="semester1"></a>
                 <h2>semester1</h2>
                 <ul>
-                    <li>A001</li>
+                    <li><a href="Activities/ CanvasSmileyFace/ canvassmileyface.html">Smiley Face</a></li>
                     <li>A002</li>
                     <li>A003</li>
                     <li>A004</li>
@@ -323,20 +335,32 @@
         </section>
         <!-- end semesters -->
         
-        <!-- begin semesters -->
+        <!-- begin semester 2 -->
         <section id="semester2">
             <div class="container">
                 <a name="semester2"></a>
                 <h2>semester2</h2>
                 <ul>
-                    <li>A001</li>
+                    <li >A001</li>
                     <li>A002</li>
                     <li>A003</li>
                     <li>A004</li>
                 </ul>
             </div>
         </section>
-        <!-- end semesters -->
+        <!-- end semester 2 -->
+
+         <!-- begin keyassignments -->
+         <main id="keyassignments">
+            
+            
+            
+            <div class="container">
+                <h2>Introduction</h2>
+                <p>Hello and welcome to my Webpage! I have been creating and making Webpages for three years now and I was taught by the one and only Mr.Chagoyan. In those 3 years i have made new friends and learned new skills. Outside of school I like do other things other than coding such as playing sports which include basketball, track, and some football for fun. I look foward to learning things this year and meet new people and have a good year. </p>
+            </div>
+        </main>
+        <!-- end keyassignments -->
     
     
         <!-- begin pagefooter -->
@@ -359,9 +383,34 @@
         <!-- begin subfooter -->
         <footer id="subfooter">
     
-            subfooter 
+             
     
-            <div class="container">subfooter</div>
+            <div class="container">
+            <div id="flexsubfooter">
+                <div class="qoute">
+                    <h3>Final thoughts</h3>
+                    <blockquote>
+                        When life gives you lemons make orange juice
+                    </blockquote>
+                    <p>- Someone</p>
+                </div>
+    
+                <div class="footerlinks">
+                    <h3>Links</h3>
+    
+                    <ul>
+                        <li>Career</li>
+                        <li>Semester1</li>
+                        <!--<li>Semester2</li>-->
+                       <li>Key Assignments</li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+            
+
+            
         </footer>
         <!-- end subfooter -->
 <div id="top">

@@ -14,5 +14,4 @@
 | StudentId | FirstName | LastName | Grade |
 | :--- | :---: | ---: | :--- |
 | 1234 | Mia | Chagoyan | A |
-| 01234 | Chase | Stewart | A |
-| 001234 | Tony | Trejo | F+ |
+
