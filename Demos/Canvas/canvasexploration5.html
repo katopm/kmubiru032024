@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas Exploration 4</title>
+    <title>Canvas Exploration 5</title>
     <style>
         h1{
             text-align: center;
@@ -16,7 +16,7 @@
         }
 
         #buttonholder{
-            background-color: red;
+            background-color: none;
             width: 300px;
             margin: auto;
             display: flex;
@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <h1>Canvas Exploration 4</h1>
+    <h1>Canvas Exploration 5</h1>
     <canvas id="canvas"></canvas>
     <div id="buttonholder">
         <button id="createline">Create Line</button>
@@ -38,7 +38,8 @@
         <button id="createtriangle">Create Triangle</button>
         <button id="createarc">Create Arc</button>
         <button id="createstar">Create Star</button>
-        <button id="undodraw">Undo</button>
+        <!-- <button id="undodraw">Undo</button> -->
+         <button id="clear">Clear</button>
     </div>
 
     <script>
@@ -131,6 +132,7 @@
         //Create star
 
         const btnCreateStar = window.document.querySelector('#createstar')
+        
         btnCreateStar.addEventListener('click', function(){
             //window.alert('Create Star')
 
@@ -148,11 +150,19 @@
 
         })
 
-        //Undo drawing
+        // //Undo drawing
 
-        const btnUndo = window.document.querySelector('#undodraw')
-        btnUndo.addEventListener('click', function(){
-            window.alert('Undo')
+        // const btnUndo = window.document.querySelector('#undodraw')
+        // btnUndo.addEventListener('click', function(){
+        //     window.alert('Undo')
+        // })
+        //Cleaer drawing
+
+        const btnclear = window.document.querySelector('#clear')
+        btnclear.style.backgroundColor = 'pink'
+        btnclear.addEventListener('click', function(){
+            // window.alert('Clear')
+            ctx.clearRect(0,0, canvas.width, canvas.height)
         })
     </script>
 </body>
