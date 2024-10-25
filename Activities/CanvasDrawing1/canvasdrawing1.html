@@ -20,6 +20,7 @@
         margin: auto;
         display: block;
         border: 1px solid silver;
+        background-color: none;
     }
     </style>
     </head>
@@ -35,24 +36,28 @@
     //Outline
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 5;
-    ctx.fillStyle = 'lightblue'
+    ctx.fillStyle = 'gray'
+    ctx.lineJoin = "round"
 
 
     ctx.beginPath();
-    ctx.strokeRect(400, 70, 240, 410)
+    ctx.fillRect(400, 70, 240, 410)
     ctx.fill()
-    ctx.stroke()
+    // ctx.stroke()
+    // ctx.closePath()
 
     //Inside
 
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 5;
-    ctx.fillStyle = 'pink'
+    ctx.fillStyle = 'lightblue'
 
     ctx.beginPath();
-    ctx.strokeRect(420, 110, 200, 320)
-    ctx.stroke()
-    ctx.fill()
+    ctx.fillRect(420, 110, 200, 320)
+    // ctx.closePath()
+    
+    
+    
 
     //Button
 
@@ -64,6 +69,22 @@
         ctx.arc(520, 455, 15, 0, Math.PI * 2,)
         ctx.fill()
         ctx.stroke()
+        ctx.closePath()
+
+         //speaker
+
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 5;
+    ctx.fillStyle = 'black';
+    ctx.lineCap = "bevel"
+
+    ctx.beginPath();
+    ctx.fillRect(480, 85, 70, 10)
+    
+    //Time
+
+    
+
     </script>
     </body>
 </html>
