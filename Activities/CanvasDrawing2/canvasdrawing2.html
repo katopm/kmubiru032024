@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanvasDrawing2</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        margin-top: 50px;
+    }
+    h1 {
+        text-align: center;
+    }
+    #canvas {
+        margin: auto;
+        display: block;
+        border: 1px solid silver;
+        background-color: none;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <h1>Canvas Drawing 2</h1>
+    <canvas id="canvas" width="1000px" height="500px"></canvas>
+
+    <script>
+
+
+         // Create variables
+    const canvas = window.document.querySelector('#canvas');
+    const ctx = canvas.getContext('2d');
+
+
+    
+        //Wheel one
+
+        ctx.strokeStyle ='black';
+        ctx.lineWidth = 20;
+
+        ctx.beginPath();
+        ctx.arc(200, 380, 100, 0, Math.PI * 2,)
+        ctx.stroke()
+
+    
+
+        //Wheel two
+
+        ctx.strokeStyle ='black';
+        ctx.lineWidth = 20;
+
+        ctx.beginPath();
+        ctx.arc(700, 380, 100, 0, Math.PI * 2,)
+        ctx.stroke()
+        ctx.closePath()
+
+        
+
+
+        //frame
+
+        ctx.strokeStyle = 'lightblue'
+        ctx.lineWidth = 30
+        
+
+        ctx.beginPath()
+        ctx.moveTo(660,126)
+        ctx.lineTo(700,390)
+       // ctx.lineTo(390,400)
+        ctx.stroke()
+
+        ctx.beginPath();
+        ctx.moveTo(684,200);
+        ctx.lineTo(350,199);
+        ctx.stroke();
+
+        ctx.beginPath()
+        ctx.moveTo(360,194.5)
+        ctx.lineTo(191,383)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(390,380)
+        ctx.lineTo(200,380)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(430,370)
+        ctx.lineTo(674,200)
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(390,370)
+        ctx.lineTo(350,160)
+        ctx.stroke()
+
+        //handle
+        ctx.strokeStyle = 'gray'
+        ctx.lineWidth = 30
+        ctx.lineCap = 'round'
+
+        ctx.beginPath()
+        ctx.moveTo(600,155)
+        ctx.lineTo(720,120)
+        ctx.stroke()
+
+        ctx.strokeStyle ="black"
+        ctx.lineWidth = 30
+        
+        ctx.beginPath()
+        ctx.arc(600,155,0,5,0,Math.Pi * 2)
+        ctx.stroke()
+
+
+        //seat 
+        ctx.strokeStyle ="black"
+        ctx.lineWidth = 30
+
+        ctx.beginPath()
+        ctx.moveTo(300,155)
+        ctx.lineTo(400,150)
+        ctx.stroke()
+        
+        
+
+
+
+         //Inside wheel
+        ctx.strokeStyle ='gray';
+        ctx.lineWidth = 10;
+        ctx.fillStyle = 'gray'
+
+        ctx.beginPath()
+        ctx.arc(700, 380, 20, 0, Math.PI * 2,)
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+
+
+         //Inside wheel 2
+         ctx.strokeStyle ='gray';
+        ctx.lineWidth = 10;
+        ctx.fillStyle = 'gray'
+
+        ctx.beginPath()
+        ctx.arc(200, 380, 20, 0, Math.PI * 2,)
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+        //Wheelthing
+
+        ctx.strokeStyle ='gray';
+        ctx.lineWidth = 10;
+        ctx.fillStyle = 'gray'
+
+        ctx.beginPath()
+        ctx.arc(400, 380, 40, 0, Math.PI * 2,)
+        ctx.fill()
+        ctx.stroke()
+
+        //Stand
+
+        ctx.strokeStyle ='black';
+        ctx.lineWidth = 10;
+        ctx.fillStyle = 'black'
+
+        ctx.beginPath();
+        ctx.fillRect(395, 385, 13, 70)
+        ctx.stroke()
+
+        ctx.strokeStyle ='black';
+        ctx.lineWidth = 10;
+        ctx.fillStyle = 'black'
+
+        ctx.beginPath();
+        ctx.fillRect(387, 450, 30, 17)
+        ctx.stroke()
+
+        
+
+    </script>
+</body>
+</html>
