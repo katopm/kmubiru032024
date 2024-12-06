@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DogObjects</title>
+</head>
+<body>
+    <h1>Dog Objects</h1>
+
+    <script>
+        // All objects have properties and method
+        // Window object
+        // window.innerwidth is a property
+        // window.alert() is a methdod of the window object
+        //Document Object
+        // document.title is a prop
+        //document.write is a method
+
+        /*
+        Methods and function are the same
+        Methods are functions that are for a specific object
+        */
+
+        //Creating custom objects
+        const DOG = 
+        {
+            name: 'Butters',
+            age: 10,
+            color: 'tan',
+            size: "small",
+            eyecolor: "blue",
+            isAlive: true,
+            isHappy: false,
+            images: '<img src="Images/dog.png" >',
+            bark: function(){return 'bark!'},
+            dig:function(){return 'dig, dig!'},
+            growl:function(){return 'grrrrrr!'},
+
+        }
+        //Examine the Dog
+
+            window.document.write(DOG.name + '<br>')
+            window.document.write(DOG.age + '<br>')
+            window.document.write(DOG.isAlive + '<br>')
+            window.document.write(DOG.images + '<br>')
+            window.document.write(DOG.bark())
+            window.document.write(DOG.dig())
+            window.document.write(DOG.growl())
+    </script>
+</body>
+</html>

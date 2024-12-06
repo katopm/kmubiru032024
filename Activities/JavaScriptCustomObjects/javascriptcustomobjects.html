@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Custom Objects</title>
+</head>
+<body>
+    <h1>JavaScript Custom Objects</h1>
+
+    <script>
+
+        const CAR =
+        {
+            brand:'Toyota',
+            model: 'Camry',
+            year:2024,
+            Horsepower : '301hp',
+            color: 'black',
+            images: '<img src="Images/toyotacamry.png" img>',
+            enginenoise:  function(){return 'vroom vroom vroom!'},
+        }
+
+        window.document.write(CAR.brand + '<br>')
+        window.document.write(CAR.model + '<br>')
+        window.document.write(CAR.year + '<br>')
+        window.document.write(CAR.brand + '<br>')
+        window.document.write(CAR.images + '<br>')
+        window.document.write(CAR.enginenoise() + '<br>')
+
+
+    </script>
+</body>
+</html>
