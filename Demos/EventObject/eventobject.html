@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+    <style>
+        h1{text-align: center;}
+        #myDiv{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin: auto;
+            font-size: 32px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Object</h1>
+    
+
+    <div id="myDiv">
+
+    </div>
+
+    <script>
+        // Event Object
+
+        window.document.addEventListener('mousemove', 
+        function(e)
+        {
+            //window.alert('hi')
+            //console.log(e.y)
+            let myDiv;
+            myDiv = window.document.querySelector('#myDiv')
+            //window.alert(myDiv)
+            myDiv.innerHTML = "x = " + e.x + "<br> y=" + e.y;
+            myDiv.style.backgroundColor="red"
+            
+        });
+
+        window.document.addEventListener('click', 
+        function(e)
+        {
+            myDiv.innerHTML = "x = " + e.x + "<br> y=" + e.y;
+            myDiv.style.backgroundColor="blue"
+        })
+    </script>
+</body>
+</html>
