@@ -17,3 +17,11 @@ e, es, e, emos, en | a, as, a, amos, an
 | cantar | canto | cante, cantes, cante, cante, etc... |
 |leer | leo | lea, leas, lea, etc...|
 |vivir | vivo | viva, vivas, viva, etc...|
+
+
+| | |Verbs with irregular YO form | |
+|:--: |:--:| :--:| :--:| 
+|tener | tengo | tenga, tengas, tenga, tengamos, etc..
+|conocer | conozco | conozca, conozcas, conozca, conozcamso ects...
+
+![Subjuntive Verbs](Images/img.png)
