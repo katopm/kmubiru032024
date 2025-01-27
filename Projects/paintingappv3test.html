@@ -221,9 +221,10 @@
             // Prevent default behavior
             e.preventDefault(); //Prevent default behavior
 
+            canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height)
             captureImageData(e);
 
-            canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height)
+           
             //alert('juhs')
             //console.log(canvasData);
 
@@ -238,7 +239,7 @@
             if(e.type == "mouseup")
             {
                 // Assign data to variable to hold the image data
-                canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height)
+                //canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height)
                 //console.log(canvasData);
 
                 //Capture the data
@@ -254,10 +255,10 @@
         window.addEventListener('resize', function()
         {
             //alert('resized')
-           // CANVAS.width = window.innerWidth
-            //CANVAS.height = window.innerHeight
+            CANVAS.width = window.innerWidth
+            CANVAS.height = window.innerHeight
             //PLace canvas data on canvas
-           //CTX.putImageData(canvasData, 0,0)
+           CTX.putImageData(canvasData, 0,0)
 
         })
 
