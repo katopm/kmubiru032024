@@ -9,19 +9,38 @@
     <h1>Personlized Array</h1>
 
     <script>
-        let myCar;
+        let myCars;
+        myCars = []
+
         
-        myCar = []
         myCars[0] = "Honda"
         myCars[1] = "Chevy"
-        myCars[3] = "Toyota"
-        myCars[4] = "Nissan"
-        myCars[5] = "Kia"
-        myCars[6] = "Subaru"
-        myCars[7] = "Ford"
-        myCars[8] = "Porshe"
-        myCars[9] = "Ram"
-        myCars[10] = "Dogde"
+        myCars[2] = "Toyota"
+        myCars[3] = "Nissan"
+        myCars[4] = "Kia"
+        myCars[5] = "Subaru"
+        myCars[6] = "Ford"
+        myCars[7] = "Porshe"
+        myCars[8] = "Ram"
+        myCars[9] = "Dogde"
+        myCars[10] = "Fait"
+
+        //Write
+        window.document.write(myCars);
+
+        myCars.push("Audi")
+        myCars.push("GMC");
+        myCars.pop()
+        myCars.shift()
+
+        //Display in console
+        console.log(myCars)
+        console.log(myCars.length)
+
+        myCars.forEach( function(car)
+        {
+            console.log(car + " makes some fast cars")
+        })
     </script>
 </body>
 </html>
