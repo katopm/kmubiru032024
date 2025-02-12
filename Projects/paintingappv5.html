@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"-->
-
     <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <title>Painting App</title>
 
 
     <style>
+  /* mobile css adjustments */
+    html{
+            overflow: hidden;
+
+        }
+
+        #erase, #clear, #undo
+        {
+            touch-action: manipulation;
+        }
 
         *{
             box-sizing: border-box;
@@ -17,15 +25,6 @@
             padding: 0;
         }
 
-
-        /*Mobile CSS Adjustments*/
-        html{
-            overflow: hidden;
-        }
-
-        #erase, #clear, #undo, #download{
-            touch-action: manipulation;
-        }
         #canvas{
             background-color: grey;
             position: absolute;
@@ -68,7 +67,7 @@
     <section id="menu">
         <input type="color" id="colorpicker" value="#000000">
         <input type="range" id="rangepicker" min="1" max="100" value="15">
-        <div id="erase"> <img src="images/eraser.svg" alt="Eraser - Erase your drawing"></div>
+        <div id="eraser"> <img src="images/eraser.svg" alt="Eraser - Erase your drawing"></div>
         <div id="clear"> <img src="images/bin.svg" alt="Trash - Clear the canvas"></div>
         <div id="undo"> <img src="Images/undo.svg" alt="Undo - Undo Last Stroke" ></div>
         <div id="download"> <img src="Images/download.svg" alt="Download - Download canvas image" ></div>
@@ -203,35 +202,28 @@
 
         };
 
-        /*Match mouse event with touch events 
-        mousedown/touchstart
-        mousemove/tocuhmove
-        mouseup/touchend
-
-        */
+        //Create Painting Events (mousedown, mousemove, mouseup)
 
         CANVAS.addEventListener('mousedown', function(e){
 
 
-painting = true;
+            painting = true;
 
-//capture x and y
+            //capture x and y
 
-MOUSE.x = e.x;
-MOUSE.y = e.y;
-
-
-CTX.beginPath();
-CTX.moveTo(MOUSE.x, MOUSE.y);
-
-//console.log(e);
-
-})
+            MOUSE.x = e.x;
+            MOUSE.y = e.y;
 
 
+            CTX.beginPath();
+            CTX.moveTo(MOUSE.x, MOUSE.y);
+
+            //console.log(e);
+
+        })
 
 
-CANVAS.addEventListener('mousemove', function(e)
+        CANVAS.addEventListener('mousemove', function(e)
         {
             // console.log(MOUSE.x + " " + MOUSE.y);
             MOUSE.x = e.x;
@@ -252,7 +244,7 @@ CANVAS.addEventListener('mousemove', function(e)
             
             captureImageData(e);
 
-           
+        
             //alert('juhs')
             //console.log(canvasData);
 
@@ -261,69 +253,89 @@ CANVAS.addEventListener('mousemove', function(e)
         }
         );
 
+        /*
+        Match mouse events with touch events
+        mousedown/touchstart
+        mousemove/touchmove
+        mouseup/touchend
+        
+        */
 
-        // touch events ////
 
         window.document.body.addEventListener('touchmove', function(e)
         {
-            /// Prevent default webpage drag
+            //prevent default webpage drag
             e.preventDefault();
-        }, {passive:false})
 
-                //Create Painting Events (mousedown, mousemove, mouseup)
+        }, {passive:false});
+
+
+
+
+
+        //Create Painting Events (mousedown, mousemove, mouseup)
 
         CANVAS.addEventListener('touchstart', function(e){
 
 
-                painting = true;
+            painting = true;
+
+            //console.log(e);
 
             //capture x and y
 
-            MOUSE.x = e.touches[0].clientX
-            MOUSE.y = e.touches[0].clientY
+            MOUSE.x = e.touches[0].clientX;
+            MOUSE.y = e.touches[0].clientY;
 
 
             CTX.beginPath();
             CTX.moveTo(MOUSE.x, MOUSE.y);
 
-//console.log(e);
+            //console.log(e);
 
-})
+        });
 
-CANVAS.addEventListener('touchmove', function(e)
+
+        CANVAS.addEventListener('touchmove', function(e)
         {
-
-            e.preventDefault();
             // console.log(MOUSE.x + " " + MOUSE.y);
-            MOUSE.x = e.touches[0].clientX
-            MOUSE.y = e.touches[0].clientY
+            MOUSE.x = e.touches[0].clientX;
+            MOUSE.y = e.touches[0].clientY;
 
             draw();
         }
         );
 
+
         CANVAS.addEventListener('touchend', function(e)
         {
             painting = false;
-            
-            // Prevent default behavior
-            e.preventDefault(); //Prevent default behavior
 
-            
+
+            //prevent default behavior
+            e.preventDefault();
+
+
+            //create variable to hold the image data
+            canvasData = CTX.getImageData(0, 0, CANVAS.width, CANVAS.height);
+
+
             captureImageData(e);
 
-            //alert('juhs')
+            //alert 
             //console.log(canvasData);
 
-            // Prevent unwanted behavior
+            //prevent unwanted behavior
             CTX.beginPath();
+
         }
         );
+
 
         function captureImageData(e)
         {
 
-            if(e.type == "mouseup" || e.type== "touchend")
+            if(e.type == "mouseup" || e.type=='touchend')
             {
                 // Assign data to variable to hold the image data
                 //canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height)
@@ -331,11 +343,11 @@ CANVAS.addEventListener('touchmove', function(e)
 
                 //Capture the data
                 undoArray.push(canvasData)
-                //console.log(undoArray)
+                console.log(undoArray)
 
 
                 undoIndex = undoIndex+1
-                //console.log(undoIndex)
+                console.log(undoIndex)
             }
         }
 
