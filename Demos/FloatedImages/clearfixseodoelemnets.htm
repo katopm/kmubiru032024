@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearFix - Pseuodo Elements</title>
+    <style>
+        #myheader{
+            background-color: coral;
+            width: max-content;
+            position: relative;
+        }
+        #myheader::before{
+            content: "";
+            height: 4px;
+            width: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #myheader::after{
+            content: "";
+            height: 4px;
+            width: 100%;
+            background: blue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 id="myheader">My Header One</h1>
+</body>
+</html>

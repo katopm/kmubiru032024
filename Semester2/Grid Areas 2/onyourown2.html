@@ -5,46 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Areas - On Your Own 2 </title>
     <style>
+        body{
+            background-color: yellow;
+        }
         #container{
+            max-width: 1200px;
+            min-height: 1200px;
             background-color: purple;
+            margin:auto;
+            border: 1px solid black;
+            gap: 3px;
+            width: 80%;
+
+
+        }
+        #wrapper{
+            border: 1px solid black;      
+            max-width: 1000px;      
+            margin: auto;
+            width: 80%;
         }
         #pageheader{
             background-color: orange;
+            min-height: 5rem;
+            padding: 1rem;
+            min-width: 4;
+            display: grid;
+            grid-area: ph;
         }
         #mainnav{
             background-color: aqua;
+            min-height: 5rem;
+            display: grid;
+            padding: 1rem;
+            grid-area: mn;
         }
         #intromedia{
             background-color: lime;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: im;
         }
         #pagemain{
             background-color: white;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: pm;
         }
         #card001{
             background-color: coral;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: c1;
+            display: flex;
         }
         #card002{
             background-color: lightblue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: c2;
         }
         #pagefooter{
             background-color: gold;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: pf;
         }
-        #pagedetail{
+        #pagedetails{
             background-color: silver;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: pd;
         }
+
+       @media screen and (min-width:768px) {
+        body{background: yellow`;}
+        #wrapper{
+            display: grid;
+                gap: 10px;
+            grid-template-areas: 
+            "ph ph ph"
+            "im im im"
+            "mn pm pm"
+            "mn c1 c2"
+            "pf pf pf"
+            "pd pd pd"
+            ;
+            margin-bottom: 2rem;
+            margin-top: 100px;
+        }
+        #pageheader{
+            min-height: 10rem;
+        }
+        #mainnav{
+            min-height: 30rem;
+        }
+        #intromedia{
+            min-height: 20rem;
+        }
+        #pagemain{
+            min-height: 10rem;
+        }
+        #card001{
+            min-height: 10rem;
+        }
+        #card002{
+            min-height: 10rem;
+        }
+        #pagefooter{
+            min-height: 5rem;
+        }
+        #pagedetails{
+            min-height: 10rem;
+        }
+        }
+
     </style>
 </head>
 <body>
     <div id="container">
         <div id="wrapper">
-            <header id="pageheader"></header>
-        <nav id="mainnav"></nav>
-        <div id="intromedia"></div>
-        <main id="pagemain"></main>
-        <section id="card001"></section>
-        <section id="card002"></section>
-        <footer id="pagefooter"></footer>
-        <footer id="pagedetails"></footer>
+            <header id="pageheader">pageheader</header>
+        <nav id="mainnav">mainnav</nav>
+        <div id="intromedia">intromedia</div>
+        <main id="pagemain">pagemain</main>
+        <section id="card001">card001</section>
+        <section id="card002">card002</section>
+        <footer id="pagefooter">pagefooter</footer>
+        <footer id="pagedetails">pagedetails</footer>
         </div>
         
     </div>
