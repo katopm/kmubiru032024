@@ -9,48 +9,47 @@
             background-color: pink;
         }
         #container{
-            background-color: red;
+            background-color: white;
             min-height: 10rem;
-            max-width: 75rem;
-            display: flex;
+            max-width: auto;
             margin: auto;
+            padding: 1rem 3rem 1rem 3rem;
+            position: relative;
+            border: 1px solid black;
         }
         #logo{
-            width: 200px;
-            height: 200px;
-            margin: auto;
-            border-radius: 50%;
-            background-color: lightblue;
-            margin-bottom: 30px;
-            top: -15px;
-            position: absolute;
+            min-height: 12rem;
+            padding: 1rem;
+            background-color: red;
         }
         #mainnav{
-            min-height: 40px;
-            min-width: 400px;
-            display: flex;
+            min-height: 12rem;
+            padding: 1rem;
             background-color: gray;
             
            
         }
         #media{
-            height: 500px;
-            width: 1500px;
+            min-height: 12rem;
+            padding: 1rem;
             background-color: coral;
-            
-            
+        }
+        #intro{
+            min-height: 12rem;
+            padding: 1rem;
+            background-color: blue;
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <wrapper> 
+        
             <div id="logo"></div>
         <nav id="mainnav"></nav>
         <div id="media"></div>
         <section id="intro"></section>
         <nav id="bottomnav"></nav>
-        </wrapper>
+        
     </div>
 </body>
 </html>
