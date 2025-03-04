@@ -6,10 +6,10 @@
     <title>Pet Adoption</title>
     <style>
         body{
-            background-color: pink;
+            background-color: none;
         }
         #container{
-            background-color: white;
+            background-color: none;
             min-height: 10rem;
             max-width: auto;
             margin: auto;
@@ -23,11 +23,20 @@
             background-color: red;
         }
         #mainnav{
-            min-height: 12rem;
+            height: 10px;
             padding: 1rem;
             background-color: gray;
-            
-           
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            gap: 0rem;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        li{
+            padding: 1rem;
+            text-align: center;
         }
         #media{
             min-height: 12rem;
@@ -45,7 +54,14 @@
     <div id="container">
         
             <div id="logo"></div>
-        <nav id="mainnav"></nav>
+        <nav id="mainnav">
+            <ul>
+                <li>Adopt</li>
+                <li>Jobs</li>
+                <li>Location</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
         <div id="media"></div>
         <section id="intro"></section>
         <nav id="bottomnav"></nav>
