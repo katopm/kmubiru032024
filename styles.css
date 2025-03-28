@@ -1,0 +1,268 @@
+body{
+    background-color: #86d1d3;
+}
+:root{
+    --color-primary: beige;
+    --color-secondary: gray;
+    --color-tertiary: pink;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    background-color: white;
+    min-height: 10rem;
+    max-width: 75rem;
+    margin: auto;
+    padding: 1rem 3rem 1rem 3rem;
+    position: relative;
+    border: 1px solid black;
+}
+
+#pageheader{
+    min-height: 200px;
+    background-color: var(--color-primary);
+    padding: 1rem;
+}
+
+#pageheader .container{
+    background-color: none;
+}
+
+#logo{
+    width: 200px;
+    height: 200px;
+    /* background-color: var(--color-primary); */
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 100px);
+    border-radius: 50%;
+    transition: all 2s;
+    background-image: url(Images/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+
+#pagenav{
+    background-color: none;
+    min-height: 40px;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 150px);
+}
+
+#pagenav a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    
+}
+
+#topnav{
+    
+    background-color: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+#topnav .container{
+    min-height: 2rem;
+    box-shadow: 3px 5px 2px 2px black ;
+}
+#topnav a{
+    text-transform: uppercase;
+}
+#media{
+    min-height: 400px;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+
+#media h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#media h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#media blockquote{
+    background-color: none;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+iframe{
+    width: 80%;
+    margin: auto;
+    display: block;
+    aspect-ratio: 16/9;
+    
+    
+}
+#career{
+    min-height: 200px;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+#pagecontent{
+    min-height: 200px;
+    background-color: beige;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+}
+#keyassignments{
+    min-height: 200px;
+    background-color: beige;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+}
+#semester1{
+    min-height: 200px;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+a {color: black;}
+#semester2{
+    min-height: 200px;
+    background-color: gray;
+    padding: 1rem;
+    
+}
+#pagefooter{
+    
+    background-color: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+#pagefooter .container{
+    min-height: 2rem;
+}
+#subfooter{
+    min-height: 200px;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+.footerlinks{
+display: none;
+}
+#top{
+    min-width: 20px;
+    min-height: 20px;
+    padding: 1rem;
+    background-color: gray;
+    border: 5px solid black;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    
+}
+
+#top a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+
+/* Media Queries */
+@media only screen and (min-width:320px) 
+{
+
+}
+@media only screen and (min-width:480px) 
+{
+    
+}
+@media only screen and (min-width:768px) 
+{
+    #flexsubfooter{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerlinks{
+        display: block;
+        min-width: 250px;
+    }
+}
+@media only screen and (min-width:1024px) 
+{
+    #pagenav{
+        background-color: none;
+        top: 0px;
+        right: 0px;
+        left: 0.5px;
+        bottom: auto;
+    }
+
+    #logo{left: 25px;}
+
+    #media{
+        height: 420px;
+    }
+    iframe{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: block;
+}
+
+#pageheader .container{
+    min-height: 4rem;
+}
+}
+
+@media only screen and (min-width:1200) 
+{
+
+}
+
+
+
+@media screen and (min-width: 900px) 
+{
+    #logo{
+        left: -60px;
+    }
+
+    #media h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#media h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#media blockquote{
+    background-color: none;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+iframe{
+    display: none;
+}
+}

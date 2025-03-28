@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 3</title>
+    <style>
+        /*mobile dsign*/
+        body{}
+        #pageheader{}
+        #topnav ul{}
+        #container{
+            background-color: purple;
+            max-width: 1200px;
+            width: 90%;
+            padding: 1rem;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            margin: auto;
+        }
+        #wrapper{
+            background-color: green;
+            max-width:90%;
+            padding: 1rem;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 600px;
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-areas: 
+            "medi"
+            "midn"
+            "main"
+            "sec1"
+            "sec2"
+            "sec3"
+            "pagef"
+            "subf"
+            ;
+        }
+        #media{
+            background-color: lime;
+            padding: 1rem;
+            position: relative;
+            grid-area: medi;
+        }
+        #logo{
+            background-color:silver;
+            width: 75px;
+            height: 75px;
+            border: 2px solid white;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            border-radius: 50%;
+        }
+        #midnav{
+            background-color: aqua;
+            padding: 1rem;
+            grid-area: midn;
+        }
+        #midnav ul{}
+        main{
+            background-color: white;
+            padding: 1rem;
+            grid-area: main;
+        }
+        
+        /*cards*/
+        .cards{
+            background-color: beige;
+            padding: 1rem;
+            border: 1px solid silver;
+            border-radius: 6px;
+        }
+
+        #sectionone{grid-area: sec1;}
+        #sectiontwo{grid-area: sec2;}
+        #sectionthree{grid-area: sec3;}
+
+        #pagefooter{
+            background-color: gray;
+            padding: 1rem;
+            grid-area: pagef;
+        }
+        #subfooter{
+            background-color: magenta;
+            padding: 1rem;
+            grid-area: subf;
+        }
+
+        /*desktop*/
+        @media  screen and(min-width:768px) {
+            #wrapper{
+                grid-template-columns:1fr 1fr 1fr;
+                grid-template-areas:
+                "medi medi medi"
+                "midn main main"
+                "sec1 sec2 sec3"
+                "pagf pagf pagf "
+                "subf subf subf"
+                
+
+                ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="pageheader">#pageheader
+        <nav id="topnav">
+            <ul1>
+                <li>Yahoo</li>
+                <li>Yahoo</li>
+                <li>Yahoo</li>
+                <li>Yahoo</li>
+            </ul1>
+        </nav>
+    </header>
+    <div id="container">
+        
+
+        <div id="wrapper">
+            
+
+            <div id="media">
+                #media
+                <div id="logo"></div>
+            </div>
+            <nav id="midnav">
+                #midnav
+                <ul>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                </ul>
+            </nav>
+
+            <main>
+                main - layoutthree
+            </main>
+
+            <section id="sectionone" class="cards">#sectionone</section>
+            <section id="sectiontwo" class="cards">#sectionone</section>
+            <section id="sectionthree" class="cards">#sectionone</section>
+
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="pagefooter">#subfooter</footer>
+        </div>
+        <!---end wrapper-->
+    </div>
+    <!---end container-->
+</body>
+</html>
