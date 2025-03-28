@@ -1,14 +1,14 @@
 body{
-    background-color: none;
+    background-color: gray;
 }
 #container{
-    background-color: none;
+    background-color: #9B9186;
     height: auto;
     max-width: auto;
     margin: auto;
     padding: 1rem 3rem 1rem 3rem;
     position: relative;
-    border: 1px solid none;
+    border: 10px solid black;
 }
 #logo{
     min-height: 200px;
@@ -22,6 +22,7 @@ body{
 #logo img{
     height: 200px;
     width: 200px;
+    border-radius: 25%;
 }
 #mainnav{
     height: 40px;
@@ -55,7 +56,7 @@ li{
 #intro{
     min-height: 12rem;
     padding: 1rem;
-    background-color: tomato;
+    background-color: #B4B7B0;
     color: white;
     
 }
