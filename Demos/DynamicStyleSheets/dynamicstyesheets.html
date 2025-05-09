@@ -36,7 +36,24 @@
        {
         //alert(selstylesheet.value)
         stylelink.href = selstylesheet.value;
+
+            // save to local storage
+        localStorage.setItem('selectedStylesheet1185', selstylesheet.value)
        }
+
+       window.addEventListener('load', function()
+       {
+            let saveStylesheet = localStorage.getItem('selectedStylesheet1185');
+            // alert(saveStylesheet)
+
+            if(saveStylesheet !== null){
+                // link to the same style sheet 
+                stylelink.href = saveStylesheet
+                // match the dropdown box
+                selstylesheet.value = saveStylesheet;
+            }
+
+       })
     </script>
 </body>
 </html>
