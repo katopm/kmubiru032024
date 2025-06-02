@@ -18,7 +18,7 @@ html{
 }
 
 .container{
-    background-color: #2F0E2F;
+    background-color: black;
     min-height: 10rem;
     max-width: 75rem;
     margin: auto;
@@ -29,7 +29,7 @@ html{
 
 #pageheader{
     min-height: 200px;
-    background-color: var(--color-primary);
+    background-color: gray;
     padding: 1rem;
 }
 
@@ -66,7 +66,7 @@ html{
 }
 
 #pagenav a{
-    color: black;
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
     
@@ -89,7 +89,7 @@ html{
 }
 #media{
     min-height: 550px;
-    background-color:#82A0B8;
+    background-color:black;
     padding: 1rem;
     line-height: 1.5rem;
     display: auto;
@@ -122,19 +122,19 @@ iframe{
 }
 #career{
     min-height: 200px;
-    background-color: #82A0B8;
+    background-color: red;
     padding: 1rem;
 }
 #pagecontent{
     min-height: 200px;
-    background-color: #82A0B8;
+    background-color: orange;
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
 }
 #keyassignments{
     min-height: 200px;
-    background-color: #82A0B8;
+    background-color: green;
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
@@ -142,13 +142,13 @@ iframe{
 }
 #semester1{
     min-height: 200px;
-    background-color: #82A0B8;
+    background-color: pink;
     padding: 1rem;
 }
 a {color: black;}
 #semester2{
     min-height: 200px;
-    background-color: #82A0B8;
+    background-color: coral;
     padding: 1rem;
     
 }
@@ -164,7 +164,7 @@ a {color: black;}
 }
 #subfooter{
     min-height: 200px;
-    background-color: #82A0B8;
+    background-color: red;
     padding: 1rem;
 }
 .footerlinks{
